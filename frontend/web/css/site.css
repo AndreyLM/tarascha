@@ -100,12 +100,31 @@ a.desc:after {
     padding: 8px;
 }
 
-@media(max-width:768px) {
-	.nav li > form {
-	    padding: 3px;
-	}
-}
+/*@media(max-width:768px) {*/
+	/*.nav li > form {*/
+	    /*padding: 3px;*/
+	/*}*/
+/*}*/
 
 .nav > li > form > button:hover {
     text-decoration: none;
+}
+
+#header-gerb {
+    float: left;
+    margin: 0 15px;
+}
+
+.navbar {
+    height: auto;
+}
+
+
+
+.nav {
+    display:table;
+}
+.nav > li{
+    width: auto;
+    display:table-cell;
 }
