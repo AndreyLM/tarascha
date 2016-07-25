@@ -64,7 +64,7 @@ AppAsset::register($this);
                         </ul>
                     </li>
                     <li><a href="#">Контакти</a></li>
-                    <li><a href="#">Відеогалрея</a></li>
+                    <li><a href="#">Оголошення</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 <!--                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
@@ -127,42 +127,42 @@ AppAsset::register($this);
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-2 secondMenu">
-                <a href="#"><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href="#"><div class="menu2"><h4>Загальні відомості про район</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Адміністрація</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Напрямки роботи</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Територіальні органи влади</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Норативно-правові документи</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Економіка</h4></div></a>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>ЦНАП</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Робота з громадкістю</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Антикорупційна діяльність</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Доступ до публічної інформації</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Електронні закупівлі (Pro Zorro)</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h6>Menu2</h6></div></a>
+                <a href=""><div class="menu2"><h4>Вакансії</h4></div></a>
             </div>
         </div>
     </div>
