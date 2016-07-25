@@ -115,16 +115,31 @@ a.desc:after {
     margin: 0 15px;
 }
 
-.navbar {
-    height: auto;
+#mainNav {
+    min-height: 100px;
 }
 
-
-
-.nav {
-    display:table;
+.navbar-nav>li>a {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    font-size: large;
 }
-.nav > li{
-    width: auto;
-    display:table-cell;
+
+#links {
+    margin-right: 150px;
 }
+.secondMenu {
+    height: 90px;
+    background-color: #333;
+    text-align: center;
+    border-top: solid white 1px;
+    border-right: solid white 1px;
+}
+.menu2 {
+    height: 90px;
+    vertical-align: middle;
+    display: table-cell;
+    align-self: center;
+}
+
