@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -173,7 +174,8 @@ AppAsset::register($this);
 
     <div class="container-fluid main_content">
         <div class="row">
-            <div class="col-sm-9 col-md-10">Articles</div>
+            <div class="col-sm-5 col-md-5"><h3 class="text-info text-uppercase">Новини Таращанщини</h3></div>
+            <div class="col-sm-4 col-md-5"><h3 class="text-info text-uppercase">Новини Київщини</h3></div>
             <div class="col-sm-3 col-md-2">
                 <h3 class="text-info text-center">Корисні посилання:</h3>
                 <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>" />
@@ -188,11 +190,16 @@ AppAsset::register($this);
         </div>
     </div>
 
-<div class="container footer">
+<div class="container-fluid main_footer">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
+        <div class="col-md-5">
+            <p class="text-right text-uppercase text_footer">09500, м.Тараща, Київська область, вул. Героїв Чорнобиля 1<br>
+                10rda-tarascha@ukr.net</p>
+        </div>
+        <div class="col-md-2"><p align="center"><img src="<?= Url::to("@web/img/gerb.png") ?>"></p></div>
+        <div class="col-md-5">
+            <p class="text-left text-uppercase text_footer">09500, 1,st.Goroyiv Chornobilya, Kiev Region<br>
+                10rda-tarascha@ukr.net</p></div>
     </div>
 </div>
 
