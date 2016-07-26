@@ -129,13 +129,40 @@ a.desc:after {
 #links {
     margin-right: 150px;
 }
+
+.announce {
+    margin-top: -20px;
+}
+
+.side_bar {
+    background-color: #444444;
+    /*margin: -10px;*/
+    height: 100%;
+    padding: 10px;
+    color: #9d9d9d;
+}
+
+.vertical-divider-left {
+    border-left: solid #9d9d9d 1px;
+}
+
+.vertical-divider-right {
+    border-right: solid #9d9d9d 1px;
+}
+
 .secondMenu {
     height: 90px;
-    background-color: #333;
+    background-color: #222;
     text-align: center;
     border-top: solid white 1px;
     border-right: solid white 1px;
 }
+
+.secondMenu a{
+    color: #9d9d9d;
+}
+
+
 .menu2 {
     height: 90px;
     vertical-align: middle;
@@ -149,7 +176,7 @@ a.desc:after {
 }
 
 .main_footer {
-    background-color: #333;
+    background-color: #222;
 }
 
 .text_footer {
