@@ -63,8 +63,10 @@ AppAsset::register($this);
 
                         </ul>
                     </li>
-                    <li><a href="#">Контакти</a></li>
                     <li><a href="#">Оголошення</a></li>
+                    <li><a href="#">Вакансії</a></li>
+                    <li><a href="#">Контакти</a></li>
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 <!--                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
@@ -162,11 +164,37 @@ AppAsset::register($this);
                 <a href=""><div class="menu2"><h4>Електронні закупівлі (Pro Zorro)</h4></div></a>
             </div>
             <div class="col-xs-2 secondMenu">
-                <a href=""><div class="menu2"><h4>Вакансії</h4></div></a>
+                <a href=""><div class="menu2"><h4> Участникам АТО</h4></div></a>
             </div>
         </div>
     </div>
 </section>
+
+
+    <div class="container-fluid main_content">
+        <div class="row">
+            <div class="col-sm-9 col-md-10">Articles</div>
+            <div class="col-sm-3 col-md-2">
+                <h3 class="text-info text-center">Корисні посилання:</h3>
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>" />
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>" />
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>" />
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/3.gif") ?>" />
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/4.gif") ?>" />
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ban1.gif") ?>" />
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ecsor2.gif") ?>" />
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/gologomor.jpg") ?>" />
+            </div>
+        </div>
+    </div>
+
+<div class="container footer">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
 
 <?php $this->endBody() ?>
 </body>

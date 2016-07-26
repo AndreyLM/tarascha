@@ -15,7 +15,11 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-
+    .img_banner {
+        width: 40%;
+        float: left;
+        margin: auto 20px;
+    }
 }
 
 /* Portrait phones and smaller */
