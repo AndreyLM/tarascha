@@ -20,6 +20,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="tarascha-rda\frontend\web\css\custom_media.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <?= Html::csrfMetaTags() ?>
@@ -29,10 +30,8 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <header>
-    <div class="container">
 
-    </div>
-    <nav class="navbar navbar-inverse" id="mainNav">
+    <nav class="navbar navbar-inverse " id="mainNav">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -77,22 +76,23 @@ AppAsset::register($this);
             </div>
         </div>
     </nav>
-    <div class="container-fluid announce">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row announce">
 
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-8"><img id="header-gerb" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"
-                                               width="100%"/></div>
-                    <div class="col-md-4">
+                    <div class="col-md-7  no-margin-padding" >
+                        <img class="img_announce_big" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                    </div>
+                    <div class="col-md-5">
                         <div class="row">
-                            <div class="col-md-12 col-xs-6"><img id="header-gerb"
-                                                                 src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"
-                                                                 width="100%"/></div>
+                            <div class="col-md-12 col-xs-6 no-margin-padding">
+                                <img class="img_announce_small" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                            </div>
                             <div class="clearfix visible-md"></div>
-                            <div class="col-md-12 col-xs-6"><img id="header-gerb"
-                                                                 src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"
-                                                                 width="100%"/></div>
+                            <div class="col-md-12 col-xs-6 no-margin-padding">
+                                <img class="img_announce_small" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                            </div>
 
                         </div>
 
@@ -101,7 +101,7 @@ AppAsset::register($this);
             </div>
 
 
-            <div class="col-md-4">
+            <div class="col-md-4 no-margin-padding">
                 <div class="side_bar">
                     <div class="row">
                         <div class="col-md-6 vertical-divider-right">
@@ -121,7 +121,7 @@ AppAsset::register($this);
                     <h4 class="text-center text-uppercase"><span class="glyphicon glyphicon-phone"></span>&nbsp;Телефони "Гарячої лінії"</h4>
                     <hr>
                     <div class="row">
-                        <div class="col-md-6 ">
+                        <div class="col-md-6">
                             <p class="phone">З питань тимчасового поселення біженців<br>
                                 5-20-32<br>
                                 5-15-83</p>

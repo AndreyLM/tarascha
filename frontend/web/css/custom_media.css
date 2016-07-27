@@ -1,0 +1,33 @@
+@media(max-width:767px){
+
+}
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+    .announce {
+        min-height: 506px;
+        max-height: 506px;
+
+    }
+
+    .side_bar {
+        height: 506px;
+    }
+
+    .img_announce_big {
+        height: 506px;
+        width: 100%;
+    }
+
+    .img_announce_small {
+        height: 253px;
+        width: 100%;
+    }
+}
+
+@media(min-width:1200px){
+
+}
