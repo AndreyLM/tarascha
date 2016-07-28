@@ -3,10 +3,26 @@
 }
 
 @media(min-width:768px){
+    .navbar-brand {
+        font-size: medium;
+        float: none;
+    }
 
+    .navbar-nav>li>a {
+        text-align: center;
+        vertical-align: middle;
+        line-height: 20px;
+        font-size: small;
+    }
 }
 
 @media(min-width:992px){
+
+    .navbar-brand {
+        font-size: large;
+        float: left;
+    }
+
     .announce {
         min-height: 506px;
         max-height: 506px;
@@ -19,15 +35,34 @@
 
     .img_announce_big {
         height: 506px;
-        width: 100%;
+        width: auto;
+        overflow: hidden;
     }
 
     .img_announce_small {
         height: 253px;
-        width: 100%;
+        width: auto;
+        overflow: hidden;
     }
+
+    .navbar-nav>li>a {
+        text-align: center;
+        vertical-align: middle;
+        line-height: 60px;
+        font-size: medium;
+    }
+
 }
 
 @media(min-width:1200px){
+    #links {
+        margin-right: 150px;
+    }
 
+    .navbar-nav>li>a {
+        text-align: center;
+        vertical-align: middle;
+        line-height: 60px;
+        font-size: large;
+    }
 }

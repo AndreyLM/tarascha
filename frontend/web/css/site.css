@@ -117,28 +117,21 @@ a.desc:after {
 
 #header-gerb {
     float: left;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 #mainNav {
     min-height: 100px;
 }
 
-.navbar-nav>li>a {
-    text-align: center;
-    vertical-align: middle;
-    line-height: 60px;
-    font-size: large;
-}
+
 
 .navbar {
     margin-bottom: 0 !important;
     border-radius: 0 !important;
 }
 
-#links {
-    margin-right: 150px;
-}
+
 
 .side_bar {
     background-color: #444444;
@@ -149,6 +142,22 @@ a.desc:after {
 .img_announce_big {
     height: 100%;
     width: 100%;
+}
+
+.announce {
+    position: relative;
+}
+
+.announce-header {
+    display: block;
+    position: absolute;
+    background: rgba(15, 15, 15, 0.5);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    color: #9d9d9d;
+    padding: 0 25px 25px 25px;
+
 }
 
 .img_announce_small {
