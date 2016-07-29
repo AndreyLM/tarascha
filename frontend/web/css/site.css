@@ -194,6 +194,28 @@ a.desc:after {
     align-self: center;
 }
 
+.sub_menu {
+    background-color: #444444;
+    padding: 15px;
+}
+
+.sub_menu a{
+    display: block;
+    /*line-height: 35px;*/
+    color: #9d9d9d;
+    margin-top: 15px;
+}
+
+.sub_menu_header {
+    color: #9d9d9d;
+    font-size: medium;
+}
+
+.sub_sub_menu a{
+    line-height: 25px;
+    font-size: small;
+}
+
 .img_banner {
     width: 100%;
     padding-bottom: 5px;
