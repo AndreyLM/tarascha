@@ -109,7 +109,7 @@ AppAsset::register($this);
                     <div class="row">
                         <div class="col-md-6 vertical-divider-right">
                             <p class="text-center">
-                                <span class="glyphicon glyphicon-envelope"></span>
+                                <span class="glyphicon glyphicon-envelope "></span>
                                 &nbsp;&nbsp;<big>Електронне звернення до голови райдержадміністрації</big>
                             </p>
                         </div>
