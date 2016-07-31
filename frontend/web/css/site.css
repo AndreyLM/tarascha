@@ -216,6 +216,9 @@ a.desc:after {
     font-size: small;
 }
 
+.main_header {
+    border-bottom: solid #9d9d9d 1px;
+}
 .img_banner {
     width: 100%;
     padding-bottom: 5px;

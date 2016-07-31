@@ -403,18 +403,35 @@ AppAsset::register($this);
 
 <div class="container-fluid main_content">
     <div class="row">
-        <div class="col-sm-5 col-md-5"><h3 class="text-info text-uppercase">Новини Таращанщини</h3></div>
-        <div class="col-sm-4 col-md-5"><h3 class="text-info text-uppercase">Новини Київщини</h3></div>
+        <div class="col-sm-5 col-md-5">
+            <div class="main_header">
+                <h3 class="text-info text-uppercase"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Новини Таращанщини</h3>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-5">
+            <div class="main_header">
+                <h3 class="text-info text-uppercase"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Новини Київщини</h3>
+            </div>
+
+        </div>
         <div class="col-sm-3 col-md-2">
-            <h3 class="text-info text-center">Корисні посилання:</h3>
-            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>"/>
-            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>"/>
-            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>"/>
-            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/3.gif") ?>"/>
-            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/4.gif") ?>"/>
-            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ban1.gif") ?>"/>
-            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ecsor2.gif") ?>"/>
-            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/gologomor.jpg") ?>"/>
+            <div class="main_header">
+                <h3 class="text-info text-left">
+                    <span class="glyphicon glyphicon-info-sign"></span>&nbsp;
+                    Корисні посилання:</h3>
+
+            </div>
+            <div class="banners">
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>"/>
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>"/>
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>"/>
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/3.gif") ?>"/>
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/4.gif") ?>"/>
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ban1.gif") ?>"/>
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ecsor2.gif") ?>"/>
+                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/gologomor.jpg") ?>"/>
+            </div>
+
         </div>
     </div>
 </div>
