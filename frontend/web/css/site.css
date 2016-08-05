@@ -170,6 +170,11 @@ a.desc:after {
     border-left: solid #9d9d9d 1px;
 }
 
+.vertical-divider-left2 {
+    border-left: solid #9d9d9d 1px ;
+
+}
+
 .vertical-divider-right {
     border-right: solid #9d9d9d 1px;
 }
