@@ -14,4 +14,10 @@ $(document).ready(function() {
             $('#'.concat(subMenu)).removeClass('hidden').show("slow");
 
     });
+
+    $('#mail-head').click(function(e){
+        e.preventDefault();
+        $('#form-mail-head').modal('show')
+            .find('#modalMailHead').load($(this).attr('href'));
+    });
 });

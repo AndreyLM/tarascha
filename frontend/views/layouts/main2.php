@@ -10,6 +10,9 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 use yii\helpers\Url;
+use yii\widgets\Pjax;
+use yii\bootstrap\Modal;
+
 
 AppAsset::register($this);
 ?>
@@ -20,11 +23,11 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <script src="<?= Url::to("@web/js/main.js") ?>"></script>
+<!---->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<!---->
+<!--    <script src="--><?//= Url::to("@web/js/main.js") ?><!--"></script>-->
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -108,10 +111,12 @@ AppAsset::register($this);
                 <div class="side_bar">
                     <div class="row">
                         <div class="col-md-6 vertical-divider-right">
-                            <p class="text-center">
-                                <span class="glyphicon glyphicon-envelope "></span>
-                                &nbsp;&nbsp;<big>Електронне звернення до голови райдержадміністрації</big>
-                            </p>
+                            <a href="<?= Url::to('contact')?>" id="mail-head">
+                                <p class="text-center">
+                                    <span class="glyphicon glyphicon-envelope "></span>
+                                    &nbsp;&nbsp;<big>Електронне звернення до голови райдержадміністрації</big>
+                                </p>
+                            </a>
                         </div>
                         <div class="col-md-6">
                             <p class="text-center">
@@ -523,7 +528,16 @@ AppAsset::register($this);
                 10rda-tarascha@ukr.net</p></div>
     </div>
 </div>
+<?php
+Modal::begin([
+    'header' => '<h4>Електронне звернення до голови адіністрації</h4>',
+    'id' => 'form-mail-head',
+    'size' => 'modal-lg',
+]);
 
+echo "<div id='modalMailHead'>Something must be here</div>";
+Modal::end();
+?>
 <?php $this->endBody() ?>
 </body>
 </html>
