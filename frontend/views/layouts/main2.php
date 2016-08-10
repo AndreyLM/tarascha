@@ -94,10 +94,12 @@ AppAsset::register($this);
                         <div class="row">
                             <div class="col-md-12 col-xs-6 no-margin-padding">
                                 <img class="img_announce_small" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                                <h4 class="announce-header">Some header will be here in the future</h4>
                             </div>
                             <div class="clearfix visible-md"></div>
                             <div class="col-md-12 col-xs-6 no-margin-padding">
                                 <img class="img_announce_small" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                                <h4 class="announce-header">Some header will be here in the future</h4>
                             </div>
 
                         </div>
@@ -111,7 +113,7 @@ AppAsset::register($this);
                 <div class="side_bar">
                     <div class="row">
                         <div class="col-md-6 vertical-divider-right">
-                            <a href="<?= Url::to('contact')?>" id="mail-head">
+                            <a href="<?= Url::to('contact')?>" id="mail-head" class="mail-el">
                                 <p class="text-center">
                                     <span class="glyphicon glyphicon-envelope "></span>
                                     &nbsp;&nbsp;<big>Електронне звернення до голови райдержадміністрації</big>
@@ -119,10 +121,13 @@ AppAsset::register($this);
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <p class="text-center">
-                                <span class="glyphicon glyphicon-envelope"></span>
-                                &nbsp;&nbsp;<big>Електронне звернення</big>
-                            </p>
+                            <a href="#" class="mail-el">
+                                <p class="text-center">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                    &nbsp;&nbsp;<big>Електронне звернення</big>
+                                </p>
+                            </a>
+
                         </div>
                     </div>
                     <hr>
@@ -535,7 +540,7 @@ Modal::begin([
     'size' => 'modal-lg',
 ]);
 
-echo "<div id='modalMailHead'>Something must be here</div>";
+echo "<div id='modalMailHead'></div>";
 Modal::end();
 ?>
 <?php $this->endBody() ?>
