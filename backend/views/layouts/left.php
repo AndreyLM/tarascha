@@ -48,8 +48,8 @@
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'New category', 'url' => ['/gii'],],
-                            ['label' => 'View categories', 'url' => ['/debug'],],
+                            ['label' => 'New category', 'url' => ['/category/create'],],
+                            ['label' => 'View categories', 'url' => ['/category/index'],],
                         ],
                     ],
                     [
@@ -57,8 +57,8 @@
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'New article', 'url' => ['/gii'],],
-                            ['label' => 'View articles', 'url' => ['/debug'],],
+                            ['label' => 'New article', 'url' => ['/category/create'],],
+                            ['label' => 'View articles', 'url' => ['/article/index'],],
                         ],
                     ],
 
