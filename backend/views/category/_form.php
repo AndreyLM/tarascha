@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use common\models\MainCategory;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Category */
@@ -12,7 +14,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'parent_category_id')->textInput() ?>
+    <?= $form->field($model, 'parent_category_id')
+        ->dropDownList(ArrayHelper::map(MainCategory::find()->all(), 'id', 'title')) ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 

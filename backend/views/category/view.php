@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="category-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+    <h4>View</h4>
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->category_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->category_id], [
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'category_id',
-            'parent_category_id',
+            'parentCategory.title',
             'title',
             'description',
             'slug',

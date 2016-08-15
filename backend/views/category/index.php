@@ -25,7 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'category_id',
-            'parent_category_id',
+            [
+                'attribute' => 'parent_category_id',
+                'value' => 'parentCategory.title',
+            ],
+
             'title',
             'description',
             'slug',

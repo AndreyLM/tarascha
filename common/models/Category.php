@@ -3,18 +3,18 @@
 namespace common\models;
 
 use Yii;
-use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "category".
  *
  * @property string $category_id
- * @property integer $parent_category_id
+ * @property string $parent_category_id
  * @property string $title
  * @property string $description
  * @property string $slug
  *
  * @property Article[] $articles
+ * @property MainCategory $parentCategory
  */
 class Category extends \yii\db\ActiveRecord
 {
@@ -36,21 +36,8 @@ class Category extends \yii\db\ActiveRecord
             [['title', 'description'], 'required'],
             [['title'], 'string', 'max' => 124],
             [['description'], 'string', 'max' => 264],
-            [['parent_category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(),
-                'targetAttribute' => ['parent_category_id' =>'category_id']],
-        ];
-    }
-
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => SluggableBehavior::className(),
-                'attribute' => 'title',
-                'slugAttribute' => 'slug',
-                'immutable' => true,
-                'ensureUnique'=>true,
-            ],
+            [['slug'], 'string', 'max' => 256],
+            [['parent_category_id'], 'exist', 'skipOnError' => true, 'targetClass' => MainCategory::className(), 'targetAttribute' => ['parent_category_id' => 'id']],
         ];
     }
 
@@ -61,8 +48,8 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'category_id' => 'Category ID',
-            'parent_category_id' => 'Parent Category ID',
-            'title' => 'Title',
+            'parent_category_id' => 'Parent Category',
+            'title' => 'SubCategory',
             'description' => 'Description',
             'slug' => 'Slug',
         ];
@@ -79,4 +66,8 @@ class Category extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getParentCategory()
+    {
+        return $this->hasOne(MainCategory::className(), ['id' => 'parent_category_id']);
+    }
 }

@@ -46,5 +46,27 @@ return [
         ],
         */
     ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'baseUrl' => 'http://localhost/tarascha-rda/frontend/web/uploads',
+                'basePath' => '@frontend/web/uploads',
+                'path' => '',
+                'name' => 'Global',
+
+//                'plugin' => [
+//                    'PluginAutoResize' => [
+//                        'enable' => true,       // For control by volume driver
+//                        'maxWidth' => 1024,       // Path to Water mark image
+//                        'maxHeight' => 1024,       // Margin right pixel
+//                        'quality' => 95,         // JPEG image save quality
+//                        'targetType' => IMG_GIF | IMG_JPG | IMG_PNG | IMG_WBMP // Target image formats ( bit-field )
+//                    ],
+//                ],
+            ],
+        ],
+    ],
     'params' => $params,
 ];

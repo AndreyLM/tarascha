@@ -38,6 +38,7 @@ class MainCategoryController extends Controller
         $searchModel = new SearchMainCategory();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

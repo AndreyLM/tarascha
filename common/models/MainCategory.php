@@ -57,7 +57,7 @@ class MainCategory extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
+            'title' => 'Category Title',
             'description' => 'Description',
             'slug' => 'Slug',
         ];

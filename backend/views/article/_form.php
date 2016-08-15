@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
+use mihaildev\elfinder\ElFinder;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Article */
@@ -18,9 +20,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'intro_text')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'intro_text')->widget(CKEditor::className(), [
+        'options' => ['rows'=>3],
+        'preset' => 'full',
+        'clientOptions' => ElFinder::ckeditorOptions(['elfinder']),
+    ]) ?>
 
-    <?= $form->field($model, 'full_text')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'tags')->textInput(['maxlength' => true]) ?>
 
@@ -28,9 +33,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'updated_at')->textInput() ?>
 
-    <?= $form->field($model, 'isActive')->textInput() ?>
+    <?= $form->field($model, 'isActive')->checkbox() ?>
 
-    <?= $form->field($model, 'isFavorite')->textInput() ?>
+    <?= $form->field($model, 'isFavorite')->checkbox() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

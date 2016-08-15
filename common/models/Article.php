@@ -4,6 +4,8 @@ namespace common\models;
 
 use Yii;
 use yii\behaviors\SluggableBehavior;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "article".
@@ -38,10 +40,9 @@ class Article extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category_id', 'intro_text', 'created_at', 'updated_at', 'isActive', 'isFavorite', 'title'], 'required'],
+            [['category_id', 'intro_text', 'isActive', 'isFavorite', 'title'], 'required'],
             [['category_id', 'isActive', 'isFavorite'], 'integer'],
             [['intro_text', 'full_text', 'title'], 'string'],
-            [['created_at', 'updated_at'], 'safe'],
             [['tags'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'category_id']],
         ];
@@ -56,6 +57,12 @@ class Article extends \yii\db\ActiveRecord
                 'slugAttribute' => 'slug',
                 'immutable' => true,
                 'ensureUnique'=>true,
+            ],
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at',
+                'value' => new Expression('NOW()'),
             ],
         ];
     }

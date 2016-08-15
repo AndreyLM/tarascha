@@ -5,12 +5,9 @@ namespace backend\controllers;
 use Yii;
 use common\models\Category;
 use common\models\search\CategorySearch;
-use yii\data\ActiveDataProvider;
-use yii\data\ArrayDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\helpers\AdminHelper;
 
 /**
  * CategoryController implements the CRUD actions for Category model.
@@ -45,16 +42,6 @@ class CategoryController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
-    }
-
-    public function actionCategories()
-    {
-
-        $result = AdminHelper::renderListCategories();
-
-        return $this->render('categories',
-            ['model' => $result]
-        );
     }
 
     /**
