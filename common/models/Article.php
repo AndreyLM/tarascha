@@ -3,11 +3,13 @@
 namespace common\models;
 
 use Yii;
+use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "article".
  *
  * @property string $id
+ * @property string $title
  * @property string $category_id
  * @property string $slug
  * @property string $intro_text
@@ -36,12 +38,25 @@ class Article extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category_id', 'intro_text', 'created_at', 'updated_at', 'isActive', 'isFavorite'], 'required'],
+            [['category_id', 'intro_text', 'created_at', 'updated_at', 'isActive', 'isFavorite', 'title'], 'required'],
             [['category_id', 'isActive', 'isFavorite'], 'integer'],
-            [['intro_text', 'full_text'], 'string'],
+            [['intro_text', 'full_text', 'title'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
-            [['slug', 'tags'], 'string', 'max' => 255],
+            [['tags'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'category_id']],
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'title',
+                'slugAttribute' => 'slug',
+                'immutable' => true,
+                'ensureUnique'=>true,
+            ],
         ];
     }
 

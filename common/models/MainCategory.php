@@ -6,24 +6,23 @@ use Yii;
 use yii\behaviors\SluggableBehavior;
 
 /**
- * This is the model class for table "category".
+ * This is the model class for table "main_category".
  *
- * @property string $category_id
- * @property integer $parent_category_id
+ * @property string $id
  * @property string $title
  * @property string $description
  * @property string $slug
  *
- * @property Article[] $articles
+ * @property Category[] $categories
  */
-class Category extends \yii\db\ActiveRecord
+class MainCategory extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'category';
+        return 'main_category';
     }
 
     /**
@@ -32,12 +31,9 @@ class Category extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['parent_category_id'], 'integer'],
             [['title', 'description'], 'required'],
-            [['title'], 'string', 'max' => 124],
-            [['description'], 'string', 'max' => 264],
-            [['parent_category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(),
-                'targetAttribute' => ['parent_category_id' =>'category_id']],
+            [['title'], 'string', 'max' => 256],
+            [['description'], 'string', 'max' => 512],
         ];
     }
 
@@ -60,8 +56,7 @@ class Category extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'category_id' => 'Category ID',
-            'parent_category_id' => 'Parent Category ID',
+            'id' => 'ID',
             'title' => 'Title',
             'description' => 'Description',
             'slug' => 'Slug',
@@ -71,12 +66,8 @@ class Category extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getArticles()
+    public function getCategories()
     {
-        return $this->hasMany(Article::className(), ['category_id' => 'category_id']);
+        return $this->hasMany(Category::className(), ['parent_category_id' => 'id']);
     }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
 }

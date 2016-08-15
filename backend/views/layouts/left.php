@@ -39,8 +39,8 @@
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'New menu', 'url' => ['/gii'],],
-                            ['label' => 'View menus', 'url' => ['/debug'],],
+                            ['label' => 'New menu', 'url' => ['#'],],
+                            ['label' => 'View menus', 'url' => ['#'],],
                         ],
                     ],
                     [
@@ -48,8 +48,17 @@
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'New category', 'url' => ['/category/create'],],
-                            ['label' => 'View categories', 'url' => ['/category/index'],],
+                            ['label' => 'New category', 'url' => ['/main-category/create'],],
+                            ['label' => 'View categories', 'url' => ['/main-category/index'],],
+                        ],
+                    ],
+                    [
+                        'label' => 'SubCategories',
+                        'icon' => 'fa fa-share',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => 'New subCategory', 'url' => ['/category/create'],],
+                            ['label' => 'View subCategories', 'url' => ['/category/index'],],
                         ],
                     ],
                     [
@@ -57,7 +66,7 @@
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'New article', 'url' => ['/category/create'],],
+                            ['label' => 'New article', 'url' => ['/article/create'],],
                             ['label' => 'View articles', 'url' => ['/article/index'],],
                         ],
                     ],

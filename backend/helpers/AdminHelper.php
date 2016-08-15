@@ -33,4 +33,31 @@ class AdminHelper
         return $return;
     }
 
+    public static function renderListCategories()
+    {
+//        $list = self::getCategories(0);
+        $list = [ 1 => [
+            'title' =>'root',
+            'category_id' => 1,
+            'parent_id' => '0',
+            'subCategories' => [
+                2 => [
+                    'title' => 'News',
+                    'category_id' => 2,
+                    'parent_id' => 1,
+                    'subCategories' => [],
+                ],
+
+                3 => [
+                    'title' => 'Uncategorized',
+                    'category_id' => 3,
+                    'parent_id' => 1,
+                    'subCategories' => [],
+                ]
+            ]
+        ]];
+
+        var_dump($list); die;
+    }
+
 }

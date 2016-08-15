@@ -5,12 +5,12 @@ namespace common\models\search;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Article;
+use common\models\MainCategory;
 
 /**
- * ArticleSearch represents the model behind the search form about `common\models\Article`.
+ * SearchMainCategory represents the model behind the search form about `common\models\MainCategory`.
  */
-class ArticleSearch extends Article
+class SearchMainCategory extends MainCategory
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class ArticleSearch extends Article
     public function rules()
     {
         return [
-            [['id', 'category_id', 'isActive', 'isFavorite'], 'integer'],
-            [['slug','title', 'intro_text', 'full_text', 'tags', 'created_at', 'updated_at'], 'safe'],
+            [['id'], 'integer'],
+            [['title', 'description', 'slug'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class ArticleSearch extends Article
      */
     public function search($params)
     {
-        $query = Article::find();
+        $query = MainCategory::find();
 
         // add conditions that should always apply here
 
@@ -60,18 +60,11 @@ class ArticleSearch extends Article
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'category_id' => $this->category_id,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
-            'isActive' => $this->isActive,
-            'isFavorite' => $this->isFavorite,
         ]);
 
-        $query->andFilterWhere(['like', 'slug', $this->slug])
-            ->andFilterWhere(['like', 'intro_text', $this->intro_text])
-            ->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'full_text', $this->full_text])
-            ->andFilterWhere(['like', 'tags', $this->tags]);
+        $query->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'slug', $this->slug]);
 
         return $dataProvider;
     }
