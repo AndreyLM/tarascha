@@ -134,14 +134,15 @@ a.desc:after {
 
 
 .side_bar {
-    background-color: #444444;
+    background-color: #9ECFFF;
     padding: 15px;
-    color: #9d9d9d;
+    color: #4A6177;
 }
 
 .img_announce_big {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .announce {
@@ -163,6 +164,7 @@ a.desc:after {
 .img_announce_small {
     height: 100%;
     width: 100%;
+    padding: 1px;
 }
 
 .mail-el {
@@ -202,14 +204,23 @@ a.desc:after {
 
 .secondMenu {
     height: 90px;
-    background-color: #222;
+    background-color: #99CCFF;
+
     text-align: center;
     border-top: solid white 1px;
     border-right: solid white 1px;
 }
 
 .secondMenu a{
-    color: #9d9d9d;
+    color: #4A6177;
+}
+
+.secondMenu:hover {
+    background-color: #4A6177;
+}
+
+.secondMenu:hover a{
+    color: #99CCFF;
 }
 
 
@@ -221,14 +232,14 @@ a.desc:after {
 }
 
 .sub_menu {
-    background-color: #444444;
+    background-color: #9ECFFF;
     padding: 15px;
 }
 
 .sub_menu a{
     display: block;
     /*line-height: 35px;*/
-    color: #9d9d9d;
+    color: #4A6177;
     margin-top: 15px;
 }
 
@@ -251,12 +262,31 @@ a.desc:after {
 }
 
 .main_footer {
-    background-color: #222;
+    background-color: #80B8ED;
 }
 
 .text_footer {
-    color: #9d9d9d;
+    color: #4A6177;
     margin-top: 40px;
+}
+
+#mainNav {
+    background-color: #99CCFF;
+    color: #4A6177;
+}
+
+#mainNav a{
+    color: #4A6177;
+}
+
+#mainNav a:hover{
+    background-color: #4A6177;
+    color: #99CCFF;
+}
+
+#mainNav .navbar-nav > .active > a {
+    background-color: #4A6177;
+    color: #99CCFF;
 }
 
 
