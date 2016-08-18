@@ -134,7 +134,7 @@ a.desc:after {
 
 
 .side_bar {
-    background-color: #9ECFFF;
+    background-color: #5FBDCE;
     padding: 15px;
     color: #4A6177;
 }
@@ -169,10 +169,14 @@ a.desc:after {
 
 .mail-el {
     text-decoration: none;
-    color: #9d9d9d;
+    color: #4A6177;
 }
 
 .mail-el:hover {
+    padding: 5px;
+    border-radius: 5px;
+    display: block;
+    background-color: #206876;
     text-decoration: none;
     color: #fff;
 }
@@ -204,7 +208,7 @@ a.desc:after {
 
 .secondMenu {
     height: 90px;
-    background-color: #99CCFF;
+    background-color: #015666;
 
     text-align: center;
     border-top: solid white 1px;
@@ -212,15 +216,15 @@ a.desc:after {
 }
 
 .secondMenu a{
-    color: #4A6177;
+    color: #5FBDCE;
 }
 
 .secondMenu:hover {
-    background-color: #4A6177;
+    background-color: #206876;
 }
 
 .secondMenu:hover a{
-    color: #99CCFF;
+    color: #FFFFFF;
 }
 
 
@@ -232,7 +236,7 @@ a.desc:after {
 }
 
 .sub_menu {
-    background-color: #9ECFFF;
+    background-color: #5FBDCE;
     padding: 15px;
 }
 
@@ -262,31 +266,31 @@ a.desc:after {
 }
 
 .main_footer {
-    background-color: #80B8ED;
+    background-color: #015666;
 }
 
 .text_footer {
-    color: #4A6177;
+    color: #5FBDCE;
     margin-top: 40px;
 }
 
 #mainNav {
-    background-color: #99CCFF;
-    color: #4A6177;
+    background-color: #015666;
+    color: #5FBDCE;
 }
 
 #mainNav a{
-    color: #4A6177;
+    color: #5FBDCE;
 }
 
 #mainNav a:hover{
-    background-color: #4A6177;
-    color: #99CCFF;
+    background-color: #206876;
+    color: #ffffff;
 }
 
 #mainNav .navbar-nav > .active > a {
-    background-color: #4A6177;
-    color: #99CCFF;
+    background-color: #206876;
+    color: #ffffff;
 }
 
 

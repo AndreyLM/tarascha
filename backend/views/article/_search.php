@@ -19,17 +19,17 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'category_id') ?>
 
-    <?= $form->field($model, 'slug') ?>
+    <?php echo //$form->field($model, 'slug') ?>
 
-    <?= $form->field($model, 'intro_text') ?>
+    <?php //echo $form->field($model, 'intro_text') ?>
 
-    <?= $form->field($model, 'full_text') ?>
+    <?php //echo $form->field($model, 'full_text') ?>
 
     <?php // echo $form->field($model, 'tags') ?>
 
-    <?php // echo $form->field($model, 'created_at') ?>
+    <?php  echo $form->field($model, 'created_at') ?>
 
-    <?php // echo $form->field($model, 'updated_at') ?>
+    <?php  echo $form->field($model, 'updated_at') ?>
 
     <?php // echo $form->field($model, 'isActive') ?>
 
