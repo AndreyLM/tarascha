@@ -65,7 +65,7 @@ class SiteController extends Controller
         ];
     }
 
-    public $layout = "main2.php";
+    public $layout = "article_layout.php";
 
     public function actionMainLayout(){
         $this->layout = "main2.php";
