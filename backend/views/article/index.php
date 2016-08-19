@@ -18,25 +18,37 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Article', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'category_id',
-            'title',
-            'slug',
-            //'intro_text:ntext',
-            //'full_text:ntext',
-            // 'tags',
-             'created_at',
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-11">
+                <?= GridView::widget([
+                    'dataProvider' => $dataProvider,
+                    'filterModel' => $searchModel,
+                    'columns' => [
+                        ['class' => 'yii\grid\SerialColumn'],
+
+                        'id',
+                        'category_id',
+                        [
+                            'attribute' => 'title',
+                            'headerOptions' => ['style' => 'max-width: 50px']
+                        ],
+//                        'title',
+                        'slug',
+                        //'intro_text:ntext',
+                        //'full_text:ntext',
+                        // 'tags',
+                        'created_at',
 //             'updated_at',
-             'isActive',
-             'isFavorite',
+                        'isActive',
+                        'isFavorite',
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+                        ['class' => 'yii\grid\ActionColumn'],
+                    ],
+                ]); ?>
+            </div>
+        </div>
+    </div>
+
 </div>

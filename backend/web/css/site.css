@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+
 }
 
 .wrap {
@@ -73,7 +74,7 @@ a.desc:after {
 }
 
 .grid-view td {
-    white-space: nowrap;
+    white-space: pre-line;
 }
 
 .grid-view .filters input,
@@ -109,3 +110,5 @@ a.desc:after {
 .nav > li > form > button:hover {
     text-decoration: none;
 }
+
+
