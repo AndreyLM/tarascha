@@ -120,7 +120,20 @@ AppAsset::register($this);
 <?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/menu2.php'); ?>
 
 <hr>
+<div class="container main_header">
+    <div class="row">
+        <h3 class="text-info text-uppercase">
+            <span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;
+            Останні новини
+        </h3>
+        <hr>
+        <div class="main_text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ex quam quis rem soluta. Ab alias architecto corporis earum eos eum explicabo impedit ipsa maiores, possimus, quas reiciendis sequi sint!
+        </div>
+    </div>
 
+</div>
+<hr>
 <?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/footer.php'); ?>
 
 

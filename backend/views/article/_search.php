@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'category_id') ?>
 
-    <?php echo //$form->field($model, 'slug') ?>
+    <?php echo $form->field($model, 'slug') ?>
 
     <?php //echo $form->field($model, 'intro_text') ?>
 
