@@ -11,7 +11,6 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-	'homeUrl' => '/',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -38,16 +37,12 @@ return [
             'errorAction' => 'site/error',
         ],
 
-       
-   
-        'request' => [
-            'baseUrl' => '',
-        ],
         'urlManager' => [
+            'baseUrl' => '/',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
-    
+
     ],
     'params' => $params,
 ];
