@@ -12,6 +12,9 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use common\models\Article;
+use yii\web\NotFoundHttpException;
+
 
 /**
  * Site controller
@@ -65,7 +68,7 @@ class SiteController extends Controller
         ];
     }
 
-    public $layout = "article_layout.php";
+    public $layout = "main2.php";
 
     public function actionMainLayout(){
         $this->layout = "main2.php";
@@ -80,6 +83,17 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function Article($slug)
+    {
+        $layout = "article_layout.php";
+
+        if (($model = Article::find()->where(['slug' => $slug])->one() !== null)) {
+            $this->render('article', ['model' => $model]);
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
     }
 
     /**

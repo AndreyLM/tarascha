@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Url;
+?>
 <section id="main_menu">
     <div class="container-fluid">
         <div class="row">
@@ -80,7 +83,7 @@
 
         <div id="administration" class="row sub_menu hidden">
             <div class="col-sm-4 vertical-divider-right">
-                <a href="#">Структура РДА</a>
+                <a href="<?= Url::to('site/article', ['slug' => 'news'])?>">Структура РДА</a>
                 <a href="#">Керівництво</a>
                 <a href="#">Розпорядок роботи</a>
                 <a href="#">Розподіл обов'язків</a>

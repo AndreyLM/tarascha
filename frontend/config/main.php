@@ -38,10 +38,9 @@ return [
         ],
 
         'urlManager' => [
+            'baseUrl' => '/',
             'enablePrettyUrl' => true,
-//            'showScriptName' => false,
-            'rules' => [
-            ],
+            'showScriptName' => false,
         ],
 
     ],
