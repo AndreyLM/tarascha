@@ -83,7 +83,7 @@ use yii\helpers\Url;
 
         <div id="administration" class="row sub_menu hidden">
             <div class="col-sm-4 vertical-divider-right">
-                <a href="<?= Url::to('site/article', ['slug' => 'news'])?>">Структура РДА</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'struktura-trasanskoi-rajonnoi-derdavnoi-administracii'])?>">Структура РДА</a>
                 <a href="#">Керівництво</a>
                 <a href="#">Розпорядок роботи</a>
                 <a href="#">Розподіл обов'язків</a>

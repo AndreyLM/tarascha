@@ -20,12 +20,17 @@ use mihaildev\elfinder\ElFinder;
 
     <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'img')->widget(CKEditor::className(), [
+        'options' => ['rows'=>1],
+        'preset' => 'full',
+        'clientOptions' => ElFinder::ckeditorOptions(['elfinder']),
+    ]) ?>
+
     <?= $form->field($model, 'intro_text')->widget(CKEditor::className(), [
         'options' => ['rows'=>3],
         'preset' => 'full',
         'clientOptions' => ElFinder::ckeditorOptions(['elfinder']),
     ]) ?>
-
 
     <?= $form->field($model, 'tags')->textInput(['maxlength' => true]) ?>
 

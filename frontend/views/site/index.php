@@ -2,52 +2,90 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Таращанська РДА';
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+<div class="col-sm-5 col-md-5 ">
+    <div class="main_header">
+        <h3 class="text-info text-uppercase"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Новини Таращанщини</h3>
     </div>
+    <hr>
 
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+    <div class="row vertical-divider-right">
+        <div class="col-md-6">
+            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <h4>Some article's header</h4>
+            <p> >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aliquid autem molestiae nemo nostrum quam voluptatem.
+                Consequatur deserunt, doloribus, enim id iste, molestias omnis
+                quibusdam rerum sit totam veritatis voluptas.</p>
         </div>
-
+        <div class="col-md-6">
+            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <h4>Some article's header</h4>
+            <p> >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aliquid autem molestiae nemo nostrum quam voluptatem.
+                Consequatur deserunt, doloribus, enim id iste, molestias omnis
+                quibusdam rerum sit totam veritatis voluptas.</p>
+        </div>
+    </div>
+    <div class="row vertical-divider-right">
+        <div class="col-md-6">
+            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <h4>Some article's header</h4>
+            <p> >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aliquid autem molestiae nemo nostrum quam voluptatem.
+                Consequatur deserunt, doloribus, enim id iste, molestias omnis
+                quibusdam rerum sit totam veritatis voluptas.</p>
+        </div>
+        <div class="col-md-6">
+            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <h4>Some article's header</h4>
+            <p> >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aliquid autem molestiae nemo nostrum quam voluptatem.
+                Consequatur deserunt, doloribus, enim id iste, molestias omnis
+                quibusdam rerum sit totam veritatis voluptas.</p>
+        </div>
+    </div>
+</div>
+<div class="col-sm-4 col-md-5 ">
+    <div class="main_header">
+        <h3 class="text-info text-uppercase"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Новини Київщини</h3>
+    </div>
+    <hr>
+    <div class="row vertical-divider-right">
+        <div class="col-md-6">
+            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <h4>Some article's header</h4>
+            <p> >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aliquid autem molestiae nemo nostrum quam voluptatem.
+                Consequatur deserunt, doloribus, enim id iste, molestias omnis
+                quibusdam rerum sit totam veritatis voluptas.</p>
+        </div>
+        <div class="col-md-6">
+            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <h4>Some article's header</h4>
+            <p> >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aliquid autem molestiae nemo nostrum quam voluptatem.
+                Consequatur deserunt, doloribus, enim id iste, molestias omnis
+                quibusdam rerum sit totam veritatis voluptas.</p>
+        </div>
+    </div>
+    <div class="row vertical-divider-right">
+        <div class="col-md-6">
+            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <h4>Some article's header</h4>
+            <p> >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aliquid autem molestiae nemo nostrum quam voluptatem.
+                Consequatur deserunt, doloribus, enim id iste, molestias omnis
+                quibusdam rerum sit totam veritatis voluptas.</p>
+        </div>
+        <div class="col-md-6">
+            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <h4>Some article's header</h4>
+            <p> >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aliquid autem molestiae nemo nostrum quam voluptatem.
+                Consequatur deserunt, doloribus, enim id iste, molestias omnis
+                quibusdam rerum sit totam veritatis voluptas.</p>
+        </div>
     </div>
 </div>

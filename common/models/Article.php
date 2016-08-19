@@ -14,6 +14,7 @@ use yii\db\Expression;
  * @property string $title
  * @property string $category_id
  * @property string $slug
+ * @property string $img
  * @property string $intro_text
  * @property string $full_text
  * @property string $tags
@@ -44,6 +45,7 @@ class Article extends \yii\db\ActiveRecord
             [['category_id', 'isActive', 'isFavorite'], 'integer'],
             [['intro_text', 'full_text', 'title'], 'string'],
             [['tags'], 'string', 'max' => 255],
+            [['img'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'category_id']],
         ];
     }
@@ -76,6 +78,7 @@ class Article extends \yii\db\ActiveRecord
             'id' => 'ID',
             'category_id' => 'Category ID',
             'slug' => 'Slug',
+            'img' => 'Article image',
             'intro_text' => 'Intro Text',
             'full_text' => 'Full Text',
             'tags' => 'Tags',

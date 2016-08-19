@@ -85,12 +85,13 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function Article($slug)
+    public function actionArticle($slug)
     {
-        $layout = "article_layout.php";
+        $this->layout = "article_layout.php";
 
-        if (($model = Article::find()->where(['slug' => $slug])->one() !== null)) {
-            $this->render('article', ['model' => $model]);
+
+        if (($model = Article::findOne(['slug' => $slug])) !== null) {
+            return $this->render('article', ['model' => $model]);
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
