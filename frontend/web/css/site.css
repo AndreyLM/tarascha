@@ -297,5 +297,11 @@ a.desc:after {
     color: #ffffff;
 }
 
+.home_article {
+    width: 100%;
+    max-height: 450px;
+    overflow: hidden;
+}
+
 
 
