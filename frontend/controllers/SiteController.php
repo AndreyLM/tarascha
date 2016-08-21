@@ -82,7 +82,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $tar = Article::find()->where(['category_id' => 4])->all();
+        $kiev = Article::find()->where(['category_id' => 6])->all();
+
+        return $this->render('index', ['tar' => $tar, 'kiev' => $kiev]);
     }
 
     public function actionArticle($slug)

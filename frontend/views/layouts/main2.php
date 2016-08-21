@@ -23,11 +23,11 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<!---->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-<!--    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
-<!---->
-<!--    <script src="--><?//= Url::to("@web/js/main.js") ?><!--"></script>-->
+    <!---->
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+    <!---->
+    <!--    <script src="--><? //= Url::to("@web/js/main.js") ?><!--"></script>-->
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -45,7 +45,7 @@ AppAsset::register($this);
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand text-uppercase text-center" href="#">
+                <a class="navbar-brand text-uppercase text-center" id="nav_brand" href="#">
                     <img id="header-gerb" src="<?= \yii\helpers\Url::to("@web/img/gerb.png") ?>" width="50px;"/>
                     Таращанська районна <br>державна адміністрація</a>
             </div>
@@ -86,19 +86,24 @@ AppAsset::register($this);
 
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-7  no-margin-padding announce" >
-                        <img class="img_announce_big"  src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
-                        <h4 class="announce-header">Some header will be here in the future</h4>
+                    <div class="col-md-7  no-margin-padding">
+                        <div class="big_announce">
+
+                            <h4 class="announce-header">Some header will be here in the future</h4>
+                        </div>
+
                     </div>
                     <div class="col-md-5">
                         <div class="row">
                             <div class="col-md-12 col-xs-6 no-margin-padding">
-                                <img class="img_announce_small" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                                <img class="img_announce_small"
+                                     src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
                                 <h4 class="announce-header">Some header will be here in the future</h4>
                             </div>
                             <div class="clearfix visible-md"></div>
                             <div class="col-md-12 col-xs-6 no-margin-padding">
-                                <img class="img_announce_small" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                                <img class="img_announce_small"
+                                     src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
                                 <h4 class="announce-header">Some header will be here in the future</h4>
                             </div>
 

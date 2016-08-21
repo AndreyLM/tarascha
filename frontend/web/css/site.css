@@ -139,14 +139,14 @@ a.desc:after {
     color: #4A6177;
 }
 
-.img_announce_big {
-    height: 100%;
+.big_announce {
     width: 100%;
-    overflow: hidden;
-}
-
-.announce {
-    position: relative;
+    height: 505px;
+    background: url(/img/rok211.jpg) no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .announce-header {
@@ -216,7 +216,7 @@ a.desc:after {
 }
 
 .secondMenu a{
-    color: #5FBDCE;
+    color: #ffffff;
 }
 
 .secondMenu:hover {
@@ -270,7 +270,7 @@ a.desc:after {
 }
 
 .text_footer {
-    color: #5FBDCE;
+    color: #ffffff;
     margin-top: 40px;
 }
 
@@ -279,8 +279,12 @@ a.desc:after {
     color: #5FBDCE;
 }
 
-#mainNav a{
-    color: #5FBDCE;
+#links>li>a{
+    color: #FFFFFF;
+}
+
+#nav_brand {
+    color: #ffffff;
 }
 
 #mainNav a:hover{
