@@ -16,7 +16,8 @@ $this->title = 'Таращанська РДА';
         <div class="col-md-6">
             <div class="home_article">
                 <h4><?=$tar[$j]->title?></h4>
-                <img width="100%" src="<?php echo $tar[j]->img; ?>"/>
+                <?php echo $tar[j]->img; ?>
+                <img width="100%" src=<?php echo $tar[j]->img; ?>/>
 
                 <p> <?=$tar[$j]->intro_text?></p>
                 <?php $j++;?>
