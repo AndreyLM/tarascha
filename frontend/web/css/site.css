@@ -303,5 +303,10 @@ a.desc:after {
     overflow: hidden;
 }
 
+.read_more {
+    display: block;
+    float: right;
+}
+
 
 
