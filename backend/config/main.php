@@ -51,7 +51,7 @@ return [
             'class' => 'mihaildev\elfinder\PathController',
             'access' => ['@'],
             'root' => [
-                'baseUrl' => 'http://localhost/tarascha-rda/frontend/web/uploads',
+                'baseUrl' => 'http://tarashcha-rda.gov.ua/frontend/web/uploads',
                 'basePath' => '@frontend/web/uploads',
                 'path' => '',
                 'name' => 'Global',
