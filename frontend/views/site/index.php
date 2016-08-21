@@ -14,13 +14,13 @@ $this->title = 'Таращанська РДА';
     for($i=1; $i<=2; $i++): ?>
     <div class="row vertical-divider-right">
         <div class="col-md-6">
-            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <img width="100%" src="<?php //echo \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
             <h4><?=$tar[$j]->title?></h4>
             <p> <?=$tar[$j]->intro_text?></p>
             <?php $j++;?>
         </div>
         <div class="col-md-6">
-            <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+            <img width="100%" src="<?php //echo \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
             <h4><?=$tar[$j]->title?></h4>
             <p> <?=$tar[$j]->intro_text?></p>
         </div>
@@ -38,13 +38,13 @@ $this->title = 'Таращанська РДА';
     for($i=1; $i<=2; $i++): ?>
         <div class="row vertical-divider-right">
             <div class="col-md-6">
-                <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                <img width="100%" src="<?php //echo \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
                 <h4><?=$kiev[$j]->title?></h4>
                 <p> <?=$kiev[$j]->intro_text?></p>
                 <?php $j++;?>
             </div>
             <div class="col-md-6">
-                <img width="100%" src="<?= \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
+                <img width="100%" src="<?php //echo \yii\helpers\Url::to("@web/img/rok211.jpg") ?>"/>
                 <h4><?=$kiev[$j]->title?></h4>
                 <p> <?=$kiev[$j]->intro_text?></p>
             </div>
