@@ -94,7 +94,9 @@ AppAsset::register($this);
                         -o-background-size: cover;
                         background-size: cover;">
 
-                            <h4 class="announce-header"><?=$this->params['ann_articles'][0]['title']?></h4>
+                            <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][0]['slug']])?>">
+                                <h4 class="announce-header"><?=strtoupper($this->params['ann_articles'][0]['title'])?></h4>
+                            </a>
                         </div>
 
                     </div>
@@ -108,7 +110,9 @@ AppAsset::register($this);
                                     -o-background-size: cover;
                                     background-size: cover;">
 
-                                    <h4 class="announce-header"><?=$this->params['ann_articles'][1]['title']?></h4>
+                                    <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][1]['slug']])?>">
+                                        <h4 class="announce-header"><?=strtoupper($this->params['ann_articles'][1]['title'])?></h4>
+                                    </a>
                                 </div>
                             </div>
                             <div class="clearfix visible-md"></div>
@@ -120,7 +124,9 @@ AppAsset::register($this);
                                     -o-background-size: cover;
                                     background-size: cover;">
 
-                                    <h4 class="announce-header"><?=$this->params['ann_articles'][2]['title']?></h4>
+                                    <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][2]['slug']])?>">
+                                        <h4 class="announce-header"><?=strtoupper($this->params['ann_articles'][2]['title'])?></h4>
+                                    </a>
                                 </div>
                             </div>
 

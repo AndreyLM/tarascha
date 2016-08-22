@@ -51,7 +51,7 @@ AppAsset::register($this);
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav" id="links">
-                    <li class="active"><a href="#">Головна</a></li>
+                    <li class="active"><a href="<?=Url::to('/site/index')?>"">Головна</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Новини <span
                                 class="caret"></span></a>
