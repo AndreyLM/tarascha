@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use yii\helpers\Url;
 $this->title = $model->title;
 ?>
 
@@ -12,7 +12,7 @@ $this->title = $model->title;
     </h3>
     <hr>
     <div class="main_text">
-        <?= $model->intro_text?>
+        <img src="<?=$model->img?>" style="width: 50%; float: left;"/> <?= $model->intro_text?>
     </div>
 </div>
 <hr>
