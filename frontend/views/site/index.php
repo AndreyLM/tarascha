@@ -19,7 +19,7 @@ $this->title = 'Таращанська РДА';
                 <img width="100%" src="<?=$tar[$j]->img; ?>"/>
                 <p> <?=$tar[$j]->intro_text?></p>
             </div>
-            <a class="read_more" href="<?= \yii\helpers\Url::to(['site/article', 'slug' => $tar[$j]->slug])?>">детальніше...
+            <a class="read_more" href="<?= \yii\helpers\Url::to(['site/article', 'slug' => $tar[$j]->slug])?>">детальніше...</a>
                 <?php $j++;?>
         </div>
         <div class="col-md-6">
