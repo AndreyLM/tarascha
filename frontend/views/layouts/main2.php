@@ -101,7 +101,7 @@ AppAsset::register($this);
                     <div class="col-md-5">
                         <div class="row">
                             <div class="col-md-12 col-xs-6 no-margin-padding">
-                                <div style="width: 100%; height: 255px;
+                                <div style="width: 99%; height: 251px; margin: 1px;
                                     background: url(<?=$this->params['ann_articles'][1]['img']?>) no-repeat center;
                                     -webkit-background-size: cover;
                                     -moz-background-size: cover;
@@ -113,7 +113,7 @@ AppAsset::register($this);
                             </div>
                             <div class="clearfix visible-md"></div>
                             <div class="col-md-12 col-xs-6 no-margin-padding">
-                                <div style="width: 100%; height: 255px;
+                                <div style="width: 99%; height: 251px; margin: 1px;
                                     background: url(<?=$this->params['ann_articles'][2]['img']?>) no-repeat center;
                                     -webkit-background-size: cover;
                                     -moz-background-size: cover;

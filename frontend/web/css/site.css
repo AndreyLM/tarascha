@@ -145,7 +145,7 @@ a.desc:after {
     display: block;
     position: absolute;
     background: rgba(15, 15, 15, 0.7);
-    width: 100%;
+    width: 99%;
     left: 0;
     bottom: 0;
     color: #ffffff;
