@@ -12,7 +12,11 @@ $this->title = $model->title;
     </h3>
     <hr>
     <div class="main_text">
-        <img src="<?=$model->img?>" style="width: 50%; float: left;"/> <?= $model->intro_text?>
+        <?php
+        if(!empty($model->img)):?>
+            <img src="<?=$model->img?>" style="width: 50%; float: left;"/>
+        <?php endif;?>
+         <?= $model->intro_text?>
     </div>
 </div>
 <hr>
