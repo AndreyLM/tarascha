@@ -16,7 +16,7 @@ $this->title = 'Таращанська РДА';
         <div class="col-md-6">
             <div class="home_article">
                 <h4><?=$tar[$j]->title?></h4>
-                <img width="100%" src="<?=$tar[$j]->img; ?>"/>
+                <img width="100%" src="<?= strip_tags($tar[$j]->img, '<p></p>') ?>"/>
                 <p> <?=$tar[$j]->intro_text?></p>
             </div>
             <a class="read_more" href="<?= \yii\helpers\Url::to(['site/article', 'slug' => $tar[$j]->slug])?>">детальніше...</a>
@@ -25,7 +25,7 @@ $this->title = 'Таращанська РДА';
         <div class="col-md-6">
             <div class="home_article">
                 <h4><?=$tar[$j]->title?></h4>
-                <img width="100%" src="<?=$tar[$j]->img; ?>"/>
+                <img width="100%" src="<?=strip_tags($tar[$j]->img, '<p></p>') ?>"/>
                 <p> <?=$tar[$j]->intro_text?></p>
 
             </div>
