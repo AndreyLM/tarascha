@@ -18,19 +18,19 @@ $this->title = 'Таращанська РДА';
                 <h4><?=$tar[$j]->title?></h4>
                 <img width="100%" src="<?=$tar[$j]->img; ?>"/>
                 <p> <?=$tar[$j]->intro_text?></p>
-                <?php $j++;?>
-                <p><?=$tar[$j]->slug?></p>
             </div>
-            <a class="read_more" href="<?= \yii\helpers\Url::to(['site/article', 'slug' => $tar[$j]->slug])?>">детальніше...</a>
+            <a class="read_more" href="<?= \yii\helpers\Url::to(['site/article', 'slug' => $tar[$j]->slug])?>">детальніше...
+                <?php $j++;?>
         </div>
         <div class="col-md-6">
             <div class="home_article">
                 <h4><?=$tar[$j]->title?></h4>
                 <img width="100%" src="<?=$tar[$j]->img; ?>"/>
                 <p> <?=$tar[$j]->intro_text?></p>
-                <?php $j++;?>
+
             </div>
             <a class="read_more" href="<?= \yii\helpers\Url::to(['site/article', 'slug' => $tar[$j]->slug])?>">детальніше...</a>
+            <?php $j++;?>
         </div>
     </div>
         <hr>

@@ -48,7 +48,7 @@ use yii\helpers\Url;
             </div>
             <div  class="col-xs-2 secondMenu">
                 <a data-value="anti-corruption_activities" href="#main_menu">
-                    <div class="menu2"><h4>Антикорупційна діяльність</h4></div>
+                    <div class="menu2"><h4>Офіс реформ</h4></div>
                 </a>
             </div>
             <div  class="col-xs-2 secondMenu">
