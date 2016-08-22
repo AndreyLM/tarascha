@@ -15,8 +15,9 @@ $this->title = 'Таращанська РДА';
     <div class="row vertical-divider-right">
         <div class="col-md-6">
             <div class="home_article">
-                <h4><?=$tar[$j]->title?></h4>
                 <img width="100%" src="<?= strip_tags($tar[$j]->img) ?>"/>
+                <h4><?=$tar[$j]->title?></h4>
+
                 <p> <?=$tar[$j]->intro_text?></p>
             </div>
             <a class="read_more" href="<?= \yii\helpers\Url::to(['site/article', 'slug' => $tar[$j]->slug])?>">детальніше...</a>
@@ -24,8 +25,9 @@ $this->title = 'Таращанська РДА';
         </div>
         <div class="col-md-6">
             <div class="home_article">
-                <h4><?=$tar[$j]->title?></h4>
                 <img width="100%" src="<?=strip_tags($tar[$j]->img) ?>"/>
+                <h4><?=$tar[$j]->title?></h4>
+
                 <p> <?=$tar[$j]->intro_text?></p>
 
             </div>
@@ -48,8 +50,9 @@ $this->title = 'Таращанська РДА';
         <div class="row vertical-divider-right">
             <div class="col-md-6">
                 <div class="home_article">
+                    <img width="100%" src="<?=strip_tags($kiev[$j]->img) ?>"/>
                     <h4><?=$kiev[$j]->title?></h4>
-                    <img width="100%" src="<?=$kiev[$j]->img; ?>"/>
+
 
                     <p> <?=$kiev[$j]->intro_text?></p>
                     <?php $j++;?>
@@ -59,8 +62,9 @@ $this->title = 'Таращанська РДА';
             </div>
             <div class="col-md-6">
                 <div class="home_article">
+                    <img width="100%" src="<?=strip_tags($kiev[$j]->img) ?>"/>
                     <h4><?=$kiev[$j]->title?></h4>
-                    <img width="100%" src="<?=$kiev[$j]->img; ?>"/>
+                    
 
                     <p> <?=$kiev[$j]->intro_text?></p>
                     <?php $j++;?>
