@@ -128,7 +128,7 @@ AppAsset::register($this);
         </h3>
         <hr>
         <div class="main_text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ex quam quis rem soluta. Ab alias architecto corporis earum eos eum explicabo impedit ipsa maiores, possimus, quas reiciendis sequi sint!
+            
         </div>
     </div>
 

@@ -82,8 +82,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $tar = Article::find()->where(['category_id' => 4])->or->all();
-        $kiev = Article::find()->where(['category_id' => 6])->all();
+        $tar = Article::find()->where(['category_id' => 4])->orderBy('created_at DESC')->all();
+        $kiev = Article::find()->where(['category_id' => 6])->orderBy('created_at DESC')->all();
 
         return $this->render('index', ['tar' => $tar, 'kiev' => $kiev]);
     }
