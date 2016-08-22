@@ -13,6 +13,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use common\models\Article;
+use common\models\Announce;
 use yii\web\NotFoundHttpException;
 
 
@@ -82,6 +83,19 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
+        $ann = Announce::find()->all();
+        foreach($ann as $announce) {
+            $arr=[];
+            $article = Article::findOne(['id' => $announce->article_id]);
+            $arr['img']=strip_tags($article->img);
+            $arr['title']=$article->title;
+            $arr['slug']=$article->slug;
+            $this->view->params['ann_articles'][] = $arr;
+        }
+
+
+
         $tar = Article::find()->where(['category_id' => 4])->orderBy('created_at DESC')->all();
         $kiev = Article::find()->where(['category_id' => 6])->orderBy('created_at DESC')->all();
 

@@ -4,6 +4,9 @@
 
 $this->title = 'Таращанська РДА';
 ?>
+
+
+
 <div class="col-sm-5 col-md-5 ">
     <div class="main_header">
         <h3 class="text-info text-uppercase"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Новини Таращанщини</h3>
@@ -64,7 +67,7 @@ $this->title = 'Таращанська РДА';
                 <div class="home_article">
                     <img width="100%" src="<?=strip_tags($kiev[$j]->img) ?>"/>
                     <h4><?=$kiev[$j]->title?></h4>
-                    
+
 
                     <p> <?=$kiev[$j]->intro_text?></p>
                     <?php $j++;?>

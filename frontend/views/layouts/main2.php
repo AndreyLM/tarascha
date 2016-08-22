@@ -51,7 +51,7 @@ AppAsset::register($this);
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav" id="links">
-                    <li class="active"><a href="<?=Url::to('site/index')?>">Головна</a></li>
+                    <li class="active"><a href="<?=Url::to('/site/index')?>">Головна</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Новини <span
                                 class="caret"></span></a>
@@ -87,24 +87,41 @@ AppAsset::register($this);
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-7  no-margin-padding">
-                        <div class="big_announce">
+                        <div style="width: 100%; height: 505px;
+                        background: url(<?=$this->params['ann_articles'][0]['img']?>) no-repeat center;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;">
 
-                            <h4 class="announce-header">Some header will be here in the future</h4>
+                            <h4 class="announce-header"><?=$this->params['ann_articles'][0]['title']?></h4>
                         </div>
 
                     </div>
                     <div class="col-md-5">
                         <div class="row">
                             <div class="col-md-12 col-xs-6 no-margin-padding">
-                                <img class="img_announce_small"
-                                     src="<?= \yii\helpers\Url::to("@web/uploads/News/Tarascha news 2016/32795641.jpg") ?>"/>
-                                <h4 class="announce-header">Some header will be here in the future</h4>
+                                <div style="width: 100%; height: 255px;
+                                    background: url(<?=$this->params['ann_articles'][1]['img']?>) no-repeat center;
+                                    -webkit-background-size: cover;
+                                    -moz-background-size: cover;
+                                    -o-background-size: cover;
+                                    background-size: cover;">
+
+                                    <h4 class="announce-header"><?=$this->params['ann_articles'][1]['title']?></h4>
+                                </div>
                             </div>
                             <div class="clearfix visible-md"></div>
                             <div class="col-md-12 col-xs-6 no-margin-padding">
-                                <img class="img_announce_small"
-                                     src="<?= \yii\helpers\Url::to("@web/uploads/News/Tarascha%20news%202016/%D0%A1%D0%BF%D0%BE%D1%80%D1%8212.jpg") ?>"/>
-                                <h4 class="announce-header">Some header will be here in the future</h4>
+                                <div style="width: 100%; height: 255px;
+                                    background: url(<?=$this->params['ann_articles'][2]['img']?>) no-repeat center;
+                                    -webkit-background-size: cover;
+                                    -moz-background-size: cover;
+                                    -o-background-size: cover;
+                                    background-size: cover;">
+
+                                    <h4 class="announce-header"><?=$this->params['ann_articles'][2]['title']?></h4>
+                                </div>
                             </div>
 
                         </div>

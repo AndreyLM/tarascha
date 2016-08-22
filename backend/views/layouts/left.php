@@ -70,6 +70,22 @@
                             ['label' => 'View articles', 'url' => ['/article/index'],],
                         ],
                     ],
+                    [
+                        'label' => 'Announce',
+                        'icon' => 'fa fa-share',
+                        'url' => '#',
+                        'items' => [
+                            [
+                                'label' => 'Main Announce', 'url' => ['/announce/view?id=1'],
+                            ],
+                            [
+                                'label' => 'Second Announce', 'url' => ['/announce/view?id=2'],
+                            ],
+                            [
+                                'label' => 'Third Announce', 'url' => ['/announce/view?id=3'],
+                            ],
+                        ],
+                    ],
 
 
                 ],
