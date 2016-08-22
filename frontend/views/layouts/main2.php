@@ -125,7 +125,7 @@ AppAsset::register($this);
                                     background-size: cover;">
 
                                     <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][2]['slug']])?>">
-                                        <h4 class="announce-header"><?=strtoupper($this->params['ann_articles'][2]['title'])?></h4>
+                                        <h4 class="announce-header"><?=$this->params['ann_articles'][2]['title']?></h4>
                                     </a>
                                 </div>
                             </div>
