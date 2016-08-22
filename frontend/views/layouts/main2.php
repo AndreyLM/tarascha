@@ -97,7 +97,7 @@ AppAsset::register($this);
                         <div class="row">
                             <div class="col-md-12 col-xs-6 no-margin-padding">
                                 <img class="img_announce_small"
-                                     src="<?= \yii\helpers\Url::to("@web/img/uploads/News/Tarascha%20news%202016/32795641.jpg") ?>"/>
+                                     src="<?= \yii\helpers\Url::to("@web/img/uploads/News/Tarascha news 2016/32795641.jpg") ?>"/>
                                 <h4 class="announce-header">Some header will be here in the future</h4>
                             </div>
                             <div class="clearfix visible-md"></div>
