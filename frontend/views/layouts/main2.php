@@ -69,9 +69,9 @@ AppAsset::register($this);
 
                         </ul>
                     </li>
-                    <li><a href="#">Оголошення</a></li>
-                    <li><a href="#">Вакансії</a></li>
-                    <li><a href="#">Контакти</a></li>
+                    <li><a href="<?= Url::to(['site/article', 'slug' => 'ogolosenna'])?>">Оголошення</a></li>
+                    <li><a href="<?= Url::to(['site/article', 'slug' => 'naavni-vakansii-v-tarasanskij-rajonnij-derzavnij-administracii'])?>">Вакансії</a></li>
+                    <li><a href="<?= Url::to(['site/article', 'slug' => 'kontakti'])?>">Контакти</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
