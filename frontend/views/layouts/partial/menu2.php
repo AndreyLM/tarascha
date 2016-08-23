@@ -70,13 +70,13 @@ use yii\helpers\Url;
 
         <div id="overview" class="row sub_menu hidden">
             <div class="col-sm-4 vertical-divider-right">
-                <a href="#">Інформація про район</a>
-                <a href="#">Паспорт району</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'zagalna-informacia-pro-rajon'])?>">Інформація про район</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'pasport-rajonu'])?>">Паспорт району</a>
                 <a href="#">Територіальні громади</a>
             </div>
             <div class="col-sm-4">
-                <a href="#">Таращанська районна рада</a>
-                <a href="#">Таращанська міська рада</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanska-rajonna-rada'])?>">Таращанська районна рада</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanska-miska-rada'])?>">Таращанська міська рада</a>
             </div>
             <div class="col-sm-offset-4"></div>
         </div>
@@ -84,10 +84,10 @@ use yii\helpers\Url;
         <div id="administration" class="row sub_menu hidden">
             <div class="col-sm-4 vertical-divider-right">
                 <a href="<?= Url::to(['site/article', 'slug' => 'struktura-trasanskoi-rajonnoi-derdavnoi-administracii'])?>">Структура РДА</a>
-                <a href="#">Керівництво</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'kerivnictvo'])?>">Керівництво</a>
                 <a href="#">Розпорядок роботи</a>
-                <a href="#">Розподіл обов'язків</a>
-                <a href="#">План роботи</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'rozpodil-obovazkiv-miz-golovou-persim-zastupnikom-golovi-zastupnikom-golovi-ta-kerivnikom-aparatu-tarasanskoi-rajonnoi-derzavnoi-administracii'])?>">Розподіл обов'язків</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'plan-roboti'])?>">План роботи</a>
             </div>
             <div class="col-sm-8">
                 <div class="row">
