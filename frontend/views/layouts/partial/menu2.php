@@ -16,7 +16,7 @@ use yii\helpers\Url;
             </div>
             <div  class="col-xs-2 secondMenu">
                 <a data-value="areas_of_work" data-value="" href="#main_menu">
-                    <div class="menu2"><h4>Напрямки роботи</h4></div>
+                    <div class="menu2"><h4>Структурні підрозділи</h4></div>
                 </a>
             </div>
             <div  class="col-xs-2 secondMenu">
@@ -43,7 +43,7 @@ use yii\helpers\Url;
             </div>
             <div  class="col-xs-2 secondMenu">
                 <a data-value="work_with_public" href="#main_menu">
-                    <div class="menu2"><h4>Структурні підрозділи</h4></div>
+                    <div class="menu2"><h4>Робота з громадськістю</h4></div>
                 </a>
             </div>
             <div  class="col-xs-2 secondMenu">
@@ -94,7 +94,7 @@ use yii\helpers\Url;
                     <div class="col-sm-6">
                         <ul>
                             <span class="sub_menu_header">Апарат РДА</span>
-                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'golovnij-specialist-z-pitan-vnutrisnoi-politiki-zvazkiv-z-gromadskistu-ta-zmi'])?>">Сектор з питань внутрішньої політики, зв’язків з громадськістю та ЗМІ</a> </li>
+                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'golovnij-specialist-z-pitan-vnutrisnoi-politiki-zvazkiv-z-gromadskistu-ta-zmi'])?>">Головний спеціаліст з питань внутрішньої політики, зв’язків з громадськістю та ЗМІ</a> </li>
                             <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'zagalnij-viddil'])?>">Загальний відділ</a> </li>
                             <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'viddil-z-pitan-personalu-aparatu-rajderzadministracii'])?>">Відділ з питань персоналу</a> </li>
 
@@ -219,8 +219,6 @@ use yii\helpers\Url;
 
         <div id="anti-corruption_activities" class="row sub_menu hidden">
             <div class="col-sm-4 vertical-divider-right">
-                <a href="#">Законодавча база</a>
-                <a href="#">Декларації</a>
 
             </div>
             <div class="col-sm-offset-4">
