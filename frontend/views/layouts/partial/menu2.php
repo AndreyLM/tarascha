@@ -26,7 +26,7 @@ use yii\helpers\Url;
             </div>
             <div  class="col-xs-2 secondMenu">
                 <a data-value="normative_legal_documents" href="#main_menu">
-                    <div class="menu2"><h4>Норативно-правові документи</h4></div>
+                    <div class="menu2"><h4>Нормативно-правові документи</h4></div>
                 </a>
             </div>
             <div  class="col-xs-2 secondMenu">
@@ -43,7 +43,7 @@ use yii\helpers\Url;
             </div>
             <div  class="col-xs-2 secondMenu">
                 <a data-value="work_with_public" href="#main_menu">
-                    <div class="menu2"><h4>Робота з громадкістю</h4></div>
+                    <div class="menu2"><h4>Структурні підрозділи</h4></div>
                 </a>
             </div>
             <div  class="col-xs-2 secondMenu">
@@ -63,7 +63,7 @@ use yii\helpers\Url;
             </div>
             <div  class="col-xs-2 secondMenu">
                 <a data-value="" href="#main_menu">
-                    <div class="menu2"><h4> Участникам АТО</h4></div>
+                    <div class="menu2"><h4> Напрямки роботи</h4></div>
                 </a>
             </div>
         </div>
@@ -154,16 +154,15 @@ use yii\helpers\Url;
                 <a href="<?= Url::to(['site/article', 'slug' => 'viddil-derzgeokadastru-u-tarasanskomu-rajoni-kiivskoi-oblasti'])?>">Відділ Держгеокадастру у Таращанському районі Київської області</a>
             </div>
             <div class="col-sm-4">
-                <a href="#">Управління державної казначейської служби України в Таращанському районі</a>
-                <a href="#">Таращанський районний центр зайнятості</a>
-                <a href="#">Таращанський районний відділ державної реєстрації актів цивільного стану Головного територіального управління юстиції у Київській області</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'upravlinna-derzavnoi-kaznacejskoi-sluzbi-ukraini-u-tarasanskomu-rajoni-kiivskij-oblasti'])?>">Управління державної казначейської служби України в Таращанському районі</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanskij-rajonnij-centr-zajnatosti'])?>">Таращанський районний центр зайнятості</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanskij-rajonnij-viddil-derzavnoi-reestracii-aktiv-civilnogo-stanu-golovnogo-teritorialnogo-upravlinna-usticii-u-kiivskij-oblasti'])?>">Таращанський районний відділ державної реєстрації актів цивільного стану Головного територіального управління юстиції у Київській області</a>
             </div>
         </div>
 
         <div id="normative_legal_documents" class="row sub_menu hidden">
             <div class="col-sm-4 ">
                 <a href="#">Розпорядження</a>
-                <a href="#">Доручення</a>
             </div>
             <div class="col-sm-offset-4">
 
