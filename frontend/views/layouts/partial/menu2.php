@@ -140,18 +140,18 @@ use yii\helpers\Url;
 
         <div id="territorial_authorities" class="row sub_menu hidden">
             <div class="col-sm-4 ">
-                <a href="#">Таращанське відділення Білоцерківської ОДПІ</a>
-                <a href="#">Управління Пенсійного фонду України в Таращанському районі</a>
-                <a href="#">Таращанське відділення Кагарлицької місцевої прокуратури</a>
-                <a href="#">Таращанське відділення поліції Миронівського ВГУНП в Київській області</a>
-                <a href="#">Таращанський районний сектор Головного управління державної служби НС України в Київській області</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanske-viddilenna-bilocerkivskoi-obednanoi-derzavnoi-podatkovoi-inspekcii-golovnogo-upravlinna-derzavnoi-fiskalnoi-sluzbi-ukraini-u-kiivskij-oblasti'])?>">Таращанське відділення Білоцерківської ОДПІ</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'upravlinna-pensijnogo-fondu-ukraini-u-tarasanskomu-rajoni-v-kiivskij-oblasti'])?>">Управління Пенсійного фонду України в Таращанському районі</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanskij-viddil-kagarlickoi-miscevoi-prokuraturi'])?>">Таращанське відділення Кагарлицької місцевої прокуратури</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanske-viddilenna-policii-mironivskogo-viddilu-golovnogo-upravlinna-nacionalnoi-policii-v-kiivskij-oblasti'])?>">Таращанське відділення поліції Миронівського ВГУНП в Київській області</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanskij-rajonnij-sektor-golovnogo-upravlinna-ds-ns-ukraini-u-kiivskij-oblasti'])?>">Таращанський районний сектор Головного управління державної служби НС України в Київській області</a>
             </div>
             <div class="col-sm-4 vertical-divider-right vertical-divider-left">
-                <a href="#">Таращанський районний сектор державної міграційної служби України в Київській області</a>
-                <a href="#">Таращанський районний відділ державної виконавчої служби Головно територіального управління юстиції у Київській області</a>
-                <a href="#">Таращанський районний суд Київської області</a>
-                <a href="#">Таращанське МРВ СБУ України в м.Києві та Київській області</a>
-                <a href="#">Відділ Держгеокадастру у Таращанському районі Київської області</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanskij-rajonnij-sektor-upravlinna-derzavnoi-migracijnoi-sluzbi-ukraini-v-kiivskij-oblasti'])?>">Таращанський районний сектор державної міграційної служби України в Київській області</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanskij-rajonnij-viddil-derzavnoi-vikonavcoi-sluzbi-golovnogo-teritorialnogo-upravlinna-usticii-u-kiivskij-oblasti'])?>">Таращанський районний відділ державної виконавчої служби Головно територіального управління юстиції у Київській області</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanskij-rajonnij-sud-kiivskoi-oblasti'])?>">Таращанський районний суд Київської області</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'tarasanske-mizrajonne-viddilenna-golovnogo-upravlinna-sbu-v-mkievi-ta-kiivskij-oblasti'])?>">Таращанське МРВ СБУ України в м.Києві та Київській області</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'viddil-derzgeokadastru-u-tarasanskomu-rajoni-kiivskoi-oblasti'])?>">Відділ Держгеокадастру у Таращанському районі Київської області</a>
             </div>
             <div class="col-sm-4">
                 <a href="#">Управління державної казначейської служби України в Таращанському районі</a>
