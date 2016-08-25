@@ -94,18 +94,18 @@ use yii\helpers\Url;
                     <div class="col-sm-6">
                         <ul>
                             <span class="sub_menu_header">Апарат РДА</span>
-                            <li class="sub_sub_menu"><a href="#">Сектор з питань внутрішньої політики, зв’язків з громадськістю та ЗМІ</a> </li>
-                            <li class="sub_sub_menu"><a href="#">Загальний відділ</a> </li>
-                            <li class="sub_sub_menu"><a href="#">Відділ з питань персоналу</a> </li>
+                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'golovnij-specialist-z-pitan-vnutrisnoi-politiki-zvazkiv-z-gromadskistu-ta-zmi'])?>">Сектор з питань внутрішньої політики, зв’язків з громадськістю та ЗМІ</a> </li>
+                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'zagalnij-viddil'])?>">Загальний відділ</a> </li>
+                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'viddil-z-pitan-personalu-aparatu-rajderzadministracii'])?>">Відділ з питань персоналу</a> </li>
 
                         </ul>
                     </div>
                     <div class="col-sm-6">
                         <ul>
-                            <li class="sub_sub_menu"><a href="#">Відділ фінансово-господарського забезпечення</a> </li>
-                            <li class="sub_sub_menu"><a href="#">Відділ з юридичних питань та взаємодії з правоохоронними органами</a> </li>
-                            <li class="sub_sub_menu"><a href="#">Відділ ведення державного реєстру виборців</a> </li>
-                            <li class="sub_sub_menu"><a href="#">Головний спеціаліст з оборонної та мобілізаційної роботи</a> </li>
+                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'viddil-finansovo-gospodarskogo-zabezpecenna-aparatu-rajderzadministracii'])?>">Відділ фінансово-господарського забезпечення</a> </li>
+                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'viddil-z-uridicnih-pitan-ta-vzaemodii-z-pravoohoronnimi-organami-aparatu-rajderzadministracii'])?>">Відділ з юридичних питань та взаємодії з правоохоронними органами</a> </li>
+                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'viddil-vedenna-derzavnogo-reestru-viborciv-aparatu-rajderzadministracii'])?>">Відділ ведення державного реєстру виборців</a> </li>
+                            <li class="sub_sub_menu"><a href="<?= Url::to(['site/article', 'slug' => 'golovnij-specialist-z-oboronnoi-ta-mobilizacijnoi-roboti-aparatu-rajderzadministracii'])?>">Головний спеціаліст з оборонної та мобілізаційної роботи</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -115,26 +115,25 @@ use yii\helpers\Url;
 
         <div id="areas_of_work" class="row sub_menu hidden">
             <div class="col-sm-4 ">
-                <a href="#">Служба у справах дітей та сім'ї</a>
-                <a href="#">Відділ економічного розвитку ат торгівлі</a>
-                <a href="#">Відділ культури, молоді та спорту</a>
-                <a href="#">Відділ містобудування, архітектури та будівництва</a>
-                <a href="#">Управління соціального захисту населення</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'sluzba-u-spravah-ditej-ta-simi'])?>">Служба у справах дітей та сім'ї</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'viddil-ekonomicnogo-rozvitku-i-torgivli'])?>">Відділ економічного розвитку ат торгівлі</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'viddil-kulturi-molodi-i-sportu'])?>">Відділ культури, молоді та спорту</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'viddil-mistobuduvanna-arhitekturi-ta-budivnictva'])?>">Відділ містобудування, архітектури та будівництва</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'upravlinna-socialnogo-zahistu-naselenna'])?>">Управління соціального захисту населення</a>
             </div>
             <div class="col-sm-4 vertical-divider-right vertical-divider-left">
-                <a href="#">Відділ з питань цивільного захисту, ліквідації наслідків Чорнобильської катастрофи та
+                <a href="<?= Url::to(['site/article', 'slug' => 'viddl-z-pitan-civilnogo-zahistu-likvidacii-naslidkiv-cornobilskoi-katastrofi-ta-zitlovo-komunalnogo-gospodarstva'])?>">Відділ з питань цивільного захисту, ліквідації наслідків Чорнобильської катастрофи та
                 житлово-комунального господарство</a>
-                <a href="#">Відділ освіти і науки</a>
-                <a href="#">Управління соціального захисту населення</a>
-                <a href="#">Управління агропромислового розвитку</a>
-                <a href="#">Територіальний центр соціального обслуговування пенсіонерів</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'viddil-osviti-i-nauki'])?>">Відділ освіти і науки</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'upravlinna-agropromislovogo-rozvitku'])?>">Управління агропромислового розвитку</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'teritorialnij-centr-socialnogo-obslugovuvanna-pensioneriv'])?>">Територіальний центр соціального обслуговування пенсіонерів</a>
             </div>
             <div class="col-sm-4">
-                <a href="#">Архів</a>
-                <a href="#">Центр первинної медико-санітарної допомоги</a>
-                <a href="#">Таращанська ЦРЛ</a>
-                <a href="#">Сектор державної реєстрації</a>
-                <a href="#">Управління фінансів</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'arhivnij-sektor'])?>">Архів</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'centr-pervinnoi-mediko-sanitarnoi-dopomogi'])?>">Центр первинної медико-санітарної допомоги</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'kz-trr-tarasanska-centralna-rajonna-likarna'])?>">Таращанська ЦРЛ</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'sektor-derzavnoi-reestracii'])?>">Сектор державної реєстрації</a>
+                <a href="<?= Url::to(['site/article', 'slug' => 'upravlinna-finansiv'])?>">Управління фінансів</a>
 
             </div>
         </div>
