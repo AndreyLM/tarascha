@@ -58,12 +58,12 @@ use yii\helpers\Url;
             </div>
             <div  class="col-xs-2 secondMenu">
                 <a data-value="prozorro" href="#main_menu">
-                    <div class="menu2"><h4>Електронні закупівлі (Pro Zorro)</h4></div>
+                    <div class="menu2"><h4>Напрямки роботи</h4></div>
                 </a>
             </div>
             <div  class="col-xs-2 secondMenu">
                 <a data-value="" href="#main_menu">
-                    <div class="menu2"><h4> Напрямки роботи</h4></div>
+                    <div class="menu2"><h4>Учасникам АТО</h4></div>
                 </a>
             </div>
         </div>
@@ -231,8 +231,8 @@ use yii\helpers\Url;
 
         <div id="prozorro" class="row sub_menu hidden">
             <div class="col-sm-4 vertical-divider-right">
-                <a href="#">Законодавча база</a>
-                <a href="#">Система електронних державних закупівель "ProZorro"</a>
+                <a href="#">Регуляторна політика</a>
+                <a href="#">Електронні закупівлі (Pro Zorro)</a>
 
             </div>
             <div class="col-sm-offset-4">
