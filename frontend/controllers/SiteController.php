@@ -1,12 +1,14 @@
 <?php
 namespace frontend\controllers;
 
+use common\models\Category;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\data\Pagination;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
@@ -96,8 +98,8 @@ class SiteController extends Controller
 
 
 
-        $tar = Article::find()->where(['category_id' => 4])->orderBy('created_at DESC')->all();
-        $kiev = Article::find()->where(['category_id' => 6])->orderBy('created_at DESC')->all();
+        $tar = Article::find()->where(['category_id' => 4, 'isFavorite' => 1, 'isActive' => 1])->orderBy('created_at DESC')->all();
+        $kiev = Article::find()->where(['category_id' => 6, 'isFavorite' => 1, 'isActive' => 1])->orderBy('created_at DESC')->all();
 
         return $this->render('index', ['tar' => $tar, 'kiev' => $kiev]);
     }
@@ -109,6 +111,24 @@ class SiteController extends Controller
 
         if (($model = Article::findOne(['slug' => $slug])) !== null) {
             return $this->render('article', ['model' => $model]);
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
+    public function actionArticles($id)
+    {
+        $this->layout = "article_layout.php";
+
+
+        if (($query = Article::find()->where(['category_id' => $id])->orderBy('created_at DESC')) !== null) {
+            $countQuery = clone $query;
+            $pages = new Pagination(['totalCount' => $countQuery->count()]);
+            $models = $query->offset($pages->offset)
+                ->limit($pages->limit)
+                ->all();
+
+            return $this->render('articles', ['model' => $models, 'pages' => $pages]);
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
