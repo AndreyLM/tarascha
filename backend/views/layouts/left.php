@@ -39,8 +39,8 @@
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'New menu', 'url' => ['#'],],
-                            ['label' => 'View menus', 'url' => ['#'],],
+                            ['label' => 'Menu', 'url' => ['/menu/index'],],
+                            ['label' => 'Menu\'s items', 'url' => ['menu-item/index'],],
                         ],
                     ],
                     [
