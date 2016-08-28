@@ -300,5 +300,35 @@ a.desc:after {
     float: right;
 }
 
+.main_content {
+     padding: -15px !important;
+     margin: 0 !important;
+     background-color: lightgrey;
+ }
+
+.article_view {
+    /*background-color: grey;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.article_header {
+    width: 90%;
+    margin: 0 auto 10px auto;
+    padding: 15px;
+    background-color: white;
+}
+
+.main_text {
+    width: 90%;
+    margin: 0 auto 0px auto;
+    padding: 15px;
+    background-color: white;
+}
+
+.main_text img {
+    padding: 10px;
+}
+
 
 

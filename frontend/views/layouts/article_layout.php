@@ -95,6 +95,7 @@ AppAsset::register($this);
         <div class="col-sm-9 col-md-10">
             <?= $content ?>
         </div>
+
         <div class="col-sm-3 col-md-2">
             <div class="main_header">
                 <h3 class="text-info text-left">
