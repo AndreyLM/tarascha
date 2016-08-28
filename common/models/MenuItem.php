@@ -14,6 +14,7 @@ use Yii;
  * @property string $type
  * @property string $categoryId_articleSlug
  * @property integer $position
+ * @property integer $position2
  *
  * @property Menu $menu
  */
@@ -34,7 +35,7 @@ class MenuItem extends \yii\db\ActiveRecord
     {
         return [
             [['menu_id', 'title', 'type', 'position'], 'required'],
-            [['menu_id', 'position'], 'integer'],
+            [['menu_id', 'position', 'position2'], 'integer'],
             [['title', 'description', 'type', 'categoryId_articleSlug'], 'string', 'max' => 255],
             [['menu_id'], 'exist', 'skipOnError' => true, 'targetClass' => Menu::className(), 'targetAttribute' => ['menu_id' => 'id']],
         ];
@@ -53,6 +54,7 @@ class MenuItem extends \yii\db\ActiveRecord
             'type' => 'Тип',
             'categoryId_articleSlug' => 'Id категорії, або lug статті',
             'position' => 'Позиція',
+            'position2' => 'Position2',
         ];
     }
 

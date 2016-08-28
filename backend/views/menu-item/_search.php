@@ -29,6 +29,8 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'position') ?>
 
+    <?php // echo $form->field($model, 'position2') ?>
+
     <div class="form-group">
         <?= Html::submitButton('search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>

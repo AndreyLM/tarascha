@@ -18,7 +18,7 @@ class MenuItemSearch extends MenuItem
     public function rules()
     {
         return [
-            [['id', 'menu_id', 'position'], 'integer'],
+            [['id', 'menu_id', 'position', 'position2'], 'integer'],
             [['title', 'description', 'type', 'categoryId_articleSlug'], 'safe'],
         ];
     }
@@ -62,6 +62,7 @@ class MenuItemSearch extends MenuItem
             'id' => $this->id,
             'menu_id' => $this->menu_id,
             'position' => $this->position,
+            'position2' => $this->position2,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])

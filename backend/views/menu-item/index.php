@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'type',
             // 'categoryId_articleSlug',
             // 'position',
+            // 'position2',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

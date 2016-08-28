@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'type',
             'categoryId_articleSlug',
             'position',
+            'position2',
         ],
     ]) ?>
 

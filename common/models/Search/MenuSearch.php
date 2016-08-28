@@ -18,7 +18,7 @@ class MenuSearch extends Menu
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id', 'position'], 'integer'],
             [['title', 'description', 'type', 'categoryId_articleSlug'], 'safe'],
         ];
     }
@@ -60,6 +60,7 @@ class MenuSearch extends Menu
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'position' => $this->position,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])

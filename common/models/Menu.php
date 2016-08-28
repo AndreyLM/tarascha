@@ -12,6 +12,7 @@ use Yii;
  * @property string $description
  * @property string $type
  * @property string $categoryId_articleSlug
+ * @property integer $position
  *
  * @property MenuItem[] $menuItems
  */
@@ -32,6 +33,7 @@ class Menu extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'type'], 'required'],
+            [['position'], 'integer'],
             [['title', 'description', 'type', 'categoryId_articleSlug'], 'string', 'max' => 255],
         ];
     }
@@ -47,6 +49,7 @@ class Menu extends \yii\db\ActiveRecord
             'description' => 'Description',
             'type' => 'Type',
             'categoryId_articleSlug' => 'Category Id Article Slug',
+            'position' => 'Position',
         ];
     }
 

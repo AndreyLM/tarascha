@@ -26,6 +26,8 @@ use common\models\Menu;
 
     <?= $form->field($model, 'position')->dropDownList([1=>'Column 1', 2=>'Column 2', 3=>'Column 3']) ?>
 
+    <?= $form->field($model, 'position2')->textInput() ?>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
