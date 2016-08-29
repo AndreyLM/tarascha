@@ -303,11 +303,11 @@ a.desc:after {
 .main_content {
      padding: -15px !important;
      margin: 0 !important;
-     background-color: lightgrey;
+
  }
 
 .article_view {
-    /*background-color: grey;*/
+    background-color: lightgrey;
     padding-top: 15px;
     padding-bottom: 15px;
 }

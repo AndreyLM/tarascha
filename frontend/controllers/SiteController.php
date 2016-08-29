@@ -123,12 +123,12 @@ class SiteController extends Controller
 
         if (($query = Article::find()->where(['category_id' => $id])->orderBy('created_at DESC')) !== null) {
             $countQuery = clone $query;
-            $pages = new Pagination(['totalCount' => $countQuery->count()]);
+            $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 2]);
             $models = $query->offset($pages->offset)
                 ->limit($pages->limit)
                 ->all();
 
-            return $this->render('articles', ['model' => $models, 'pages' => $pages]);
+            return $this->render('articles', ['models' => $models, 'pages' => $pages]);
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }

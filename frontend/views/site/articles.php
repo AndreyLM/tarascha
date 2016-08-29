@@ -2,21 +2,20 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Url;
-$this->title = $model->title;
+use yii\widgets\LinkPager;
+$this->title = 'Новини';
 ?>
+<div class="article_view">
+    <?php
+    foreach ($models as $model) {
+        // выводим название организации (пример)
+        echo $model->title;
+    }
 
-<div class="main_header">
-    <h3 class="text-info text-uppercase">
-        <span class="glyphicon glyphicon-bookmark"></span>&nbsp;&nbsp;
-        <?= $model->title?>
-    </h3>
-    <hr>
-    <div class="main_text">
-        <?php
-        if(!empty($model->img)):?>
-            <img src="<?=strip_tags($model->img)?>" style="width: 50%; float: left;"/>
-        <?php endif;?>
-        <?= $model->intro_text?>
-    </div>
+    echo LinkPager::widget([
+        'pagination' => $pages,
+    ]);
+    ?>
+
 </div>
-<hr>
+
