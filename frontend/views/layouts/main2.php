@@ -56,8 +56,8 @@ AppAsset::register($this);
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Новини <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="">Новини Таращанщини</a></li>
-                            <li><a href="#">Новини Київщини</a></li>
+                            <li><a href="<?=Url::to(['site/articles', 'id' => 4])?>">Новини Таращанщини</a></li>
+                            <li><a href="<?=Url::to(['site/articles', 'id' => 6])?>">Новини Київщини</a></li>
 
                         </ul>
                     </li>

@@ -123,7 +123,7 @@ class SiteController extends Controller
 
         if (($query = Article::find()->where(['category_id' => $id])->orderBy('created_at DESC')) !== null) {
             $countQuery = clone $query;
-            $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 2]);
+            $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 9]);
             $models = $query->offset($pages->offset)
                 ->limit($pages->limit)
                 ->all();
