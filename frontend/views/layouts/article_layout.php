@@ -12,6 +12,8 @@ use common\widgets\Alert;
 use yii\helpers\Url;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
+use frontend\widgets\Menu;
+
 
 
 AppAsset::register($this);
@@ -118,7 +120,8 @@ AppAsset::register($this);
     </div>
 </div>
 
-<?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/menu2.php'); ?>
+<?php //echo \Yii::$app->view->renderFile('@app/views/layouts/partial/menu2.php'); ?>
+<?= Menu::widget() ?>
 
 <hr>
 <div class="container main_header">

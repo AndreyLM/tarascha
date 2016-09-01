@@ -60,4 +60,8 @@ class Menu extends \yii\db\ActiveRecord
     {
         return $this->hasMany(MenuItem::className(), ['menu_id' => 'id']);
     }
+
+    public function testing() {
+        $this->getMenuItems()->where(['position'=>1])->orderBy('position2')->all();
+    }
 }

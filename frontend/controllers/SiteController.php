@@ -16,6 +16,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use common\models\Article;
 use common\models\Announce;
+use common\models\Menu;
 use yii\web\NotFoundHttpException;
 
 
@@ -87,6 +88,7 @@ class SiteController extends Controller
     {
 
         $ann = Announce::find()->all();
+
         foreach($ann as $announce) {
             $arr=[];
             $article = Article::findOne(['id' => $announce->article_id]);
