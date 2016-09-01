@@ -48,8 +48,7 @@ class Menu extends Widget
             }
             $j++;
         }
-        echo '</div>';
-        echo '</div>';
+
 
         foreach ($this->mn as $menu){
             if ($menu->type=='root') {
@@ -66,6 +65,9 @@ class Menu extends Widget
                 echo '</div>';
             }
         }
+
+        echo '</div>';
+        echo '</div>';
     }
 
     private function renderSubMenu($items)
