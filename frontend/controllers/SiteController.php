@@ -118,6 +118,25 @@ class SiteController extends Controller
         }
     }
 
+    public function actionSearch()
+    {
+        $this->layout = "article_layout.php";
+
+        $search = \Yii::$app->request->getQueryParam('srch-term');
+
+        if (($query = Article::find()->orWhere(['like', 'title', $search])->orderBy('created_at DESC')) !== null) {
+            $countQuery = clone $query;
+            $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 9]);
+            $models = $query->offset($pages->offset)
+                ->limit($pages->limit)
+                ->all();
+
+            return $this->render('search', ['models' => $models, 'pages' => $pages]);
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
     public function actionArticles($id)
     {
         $this->layout = "article_layout.php";

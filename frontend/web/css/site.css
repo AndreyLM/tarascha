@@ -331,5 +331,15 @@ a.desc:after {
     padding: 10px;
 }
 
+#search {
+    margin-top: 25px;
+    padding-right: 0;
+    padding-left: 1px;
+}
+
+#myNavbar {
+    padding-left: 1px;
+    padding-right: 1px;
+}
 
 

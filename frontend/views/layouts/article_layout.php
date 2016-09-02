@@ -51,6 +51,18 @@ AppAsset::register($this);
                     <img id="header-gerb" src="<?= \yii\helpers\Url::to("@web/img/gerb.png") ?>" width="50px;"/>
                     Таращанська районна <br>державна адміністрація</a>
             </div>
+
+            <div class="col-sm-2 pull-right" id="search">
+                <form action="<?= Url::to(['site/search'])?>" class="" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav" id="links">
                     <li class="active"><a href="<?=Url::to('/site/index')?>"">Головна</a></li>
@@ -75,10 +87,6 @@ AppAsset::register($this);
                     <li><a href="<?= Url::to(['site/article', 'slug' => 'naavni-vakansii-v-tarasanskij-rajonnij-derzavnij-administracii'])?>">Вакансії</a></li>
                     <li><a href="<?= Url::to(['site/article', 'slug' => 'kontakti'])?>">Контакти</a></li>
 
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <!--                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
                 </ul>
             </div>
         </div>

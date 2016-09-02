@@ -55,10 +55,6 @@
 }
 
 @media(min-width:1200px){
-    #links {
-        margin-right: 150px;
-    }
-
     .navbar-nav>li>a {
         text-align: center;
         vertical-align: middle;
