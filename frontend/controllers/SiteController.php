@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use common\models\Category;
+use common\models\LegalDocuments;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -152,6 +153,21 @@ class SiteController extends Controller
             return $this->render('articles', ['models' => $models, 'pages' => $pages]);
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
+    public function actionDocuments()
+    {
+        $this->layout = "article_layout.php";
+
+        $model = new LegalDocuments();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('documents', [
+                'model' => $model,
+            ]);
         }
     }
 

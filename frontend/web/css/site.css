@@ -342,4 +342,12 @@ a.desc:after {
     padding-right: 1px;
 }
 
+.search-docs {
+    padding: 5px;
+}
+
+.search-docs input {
+    width: 100%;
+}
+
 

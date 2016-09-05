@@ -16,7 +16,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'type')->dropDownList(['root' => 'root', 'category'=>'category', 'article'=>'article']) ?>
+    <?= $form->field($model, 'type')->dropDownList([
+        'root' => 'root',
+        'category'=>'category',
+        'article'=>'article',
+        'documents' => 'documents']) ?>
 
     <?= $form->field($model, 'categoryId_articleSlug')->textInput(['maxlength' => true]) ?>
 

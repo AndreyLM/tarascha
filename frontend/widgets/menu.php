@@ -34,9 +34,11 @@ class Menu extends Widget
             if ($menu->type == 'root') {
                 echo 'href="#main_menu">';
             } elseif ($menu->type == 'category') {
-                echo 'href="' . Url::to(['site/articles', 'id' => $menu->categoryId_articleSlug]) . '">';
+                echo 'href="' . Url::to(['/site/articles', 'id' => $menu->categoryId_articleSlug]) . '">';
+            } elseif ($menu->type == 'documents'){
+                echo 'href="' . Url::to('/site/documents') . '">';
             } else {
-                echo 'href="' . Url::to(['site/article', 'slug' => $menu->categoryId_articleSlug]) . '">';
+                echo 'href="' . Url::to(['/site/article', 'slug' => $menu->categoryId_articleSlug]) . '">';
             }
             echo '<div class="menu2">';
             echo '<h4>' . $menu->title . '</h4>';
