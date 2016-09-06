@@ -51,24 +51,26 @@ AppAsset::register($this);
                     Таращанська районна <br>державна адміністрація</a>
             </div>
             <div class="col-sm-2 pull-right" id="search">
-                <form action="<?= Url::to(['site/search'])?>" class="" role="search">
+                <form action="<?= Url::to(['site/search']) ?>" class="" role="search">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+
                         <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
+                            </button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav" id="links">
-                    <li class="active"><a href="<?=Url::to('/site/index')?>">Головна</a></li>
+                    <li class="active"><a href="<?= Url::to('/site/index') ?>">Головна</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Новини <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?=Url::to(['site/articles', 'id' => 4])?>">Новини Таращанщини</a></li>
-                            <li><a href="<?=Url::to(['site/articles', 'id' => 6])?>">Новини Київщини</a></li>
+                            <li><a href="<?= Url::to(['site/articles', 'id' => 4]) ?>">Новини Таращанщини</a></li>
+                            <li><a href="<?= Url::to(['site/articles', 'id' => 6]) ?>">Новини Київщини</a></li>
 
                         </ul>
                     </li>
@@ -80,9 +82,11 @@ AppAsset::register($this);
 
                         </ul>
                     </li>
-                    <li><a href="<?= Url::to(['site/article', 'slug' => 'ogolosenna'])?>">Оголошення</a></li>
-                    <li><a href="<?= Url::to(['site/article', 'slug' => 'naavni-vakansii-v-tarasanskij-rajonnij-derzavnij-administracii'])?>">Вакансії</a></li>
-                    <li><a href="<?= Url::to(['site/article', 'slug' => 'kontakti'])?>">Контакти</a></li>
+                    <li><a href="<?= Url::to(['site/article', 'slug' => 'ogolosenna']) ?>">Оголошення</a></li>
+                    <li>
+                        <a href="<?= Url::to(['site/article', 'slug' => 'naavni-vakansii-v-tarasanskij-rajonnij-derzavnij-administracii']) ?>">Вакансії</a>
+                    </li>
+                    <li><a href="<?= Url::to(['site/article', 'slug' => 'kontakti']) ?>">Контакти</a></li>
 
                 </ul>
 
@@ -97,14 +101,14 @@ AppAsset::register($this);
                 <div class="row">
                     <div class="col-md-7  no-margin-padding">
                         <div style="width: 100%; height: 505px;
-                        background: url(<?=$this->params['ann_articles'][0]['img']?>) no-repeat center;
-                        -webkit-background-size: cover;
-                        -moz-background-size: cover;
-                        -o-background-size: cover;
-                        background-size: cover;">
+                            background: url(<?= $this->params['ann_articles'][0]['img'] ?>) no-repeat center;
+                            -webkit-background-size: cover;
+                            -moz-background-size: cover;
+                            -o-background-size: cover;
+                            background-size: cover;">
 
-                            <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][0]['slug']])?>">
-                                <h4 class="announce-header"><?=$this->params['ann_articles'][0]['title']?></h4>
+                            <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][0]['slug']]) ?>">
+                                <h4 class="announce-header"><?= $this->params['ann_articles'][0]['title'] ?></h4>
                             </a>
                         </div>
 
@@ -113,28 +117,28 @@ AppAsset::register($this);
                         <div class="row">
                             <div class="col-md-12 col-xs-6 no-margin-padding">
                                 <div style="width: 99%; height: 251px; margin: 1px;
-                                    background: url(<?=$this->params['ann_articles'][1]['img']?>) no-repeat center;
+                                    background: url(<?= $this->params['ann_articles'][1]['img'] ?>) no-repeat center;
                                     -webkit-background-size: cover;
                                     -moz-background-size: cover;
                                     -o-background-size: cover;
                                     background-size: cover;">
 
-                                    <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][1]['slug']])?>">
-                                        <h4 class="announce-header"><?=$this->params['ann_articles'][1]['title']?></h4>
+                                    <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][1]['slug']]) ?>">
+                                        <h4 class="announce-header"><?= $this->params['ann_articles'][1]['title'] ?></h4>
                                     </a>
                                 </div>
                             </div>
                             <div class="clearfix visible-md"></div>
                             <div class="col-md-12 col-xs-6 no-margin-padding">
                                 <div style="width: 99%; height: 251px; margin: 1px;
-                                    background: url(<?=$this->params['ann_articles'][2]['img']?>) no-repeat center;
+                                    background: url(<?= $this->params['ann_articles'][2]['img'] ?>) no-repeat center;
                                     -webkit-background-size: cover;
                                     -moz-background-size: cover;
                                     -o-background-size: cover;
                                     background-size: cover;">
 
-                                    <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][2]['slug']])?>">
-                                        <h4 class="announce-header"><?=$this->params['ann_articles'][2]['title']?></h4>
+                                    <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][2]['slug']]) ?>">
+                                        <h4 class="announce-header"><?= $this->params['ann_articles'][2]['title'] ?></h4>
                                     </a>
                                 </div>
                             </div>
@@ -155,30 +159,35 @@ AppAsset::register($this);
 
 <?php //echo \Yii::$app->view->renderFile('@app/views/layouts/partial/menu2.php'); ?>
 <?= Menu::widget() ?>
-<div class="container-fluid main_content">
-    <div class="row">
-        <?= $content ?>
-        <div class="col-sm-3 col-md-2">
-            <div class="main_header">
-                <h3 class="text-info text-left">
-                    <span class="glyphicon glyphicon-info-sign"></span>&nbsp;
-                    Корисні посилання:</h3>
+<div class="main_content">
+    <div class="container-fluid">
+        <div class="article_view">
+            <div class="row">
+                <?= $content ?>
+                <div class="col-sm-3 col-md-2">
+                    <div class="main_header">
+                        <h3 class="text-info text-left">
+                            <span class="glyphicon glyphicon-info-sign"></span>&nbsp;
+                            Корисні посилання:</h3>
 
-            </div>
-            <div class="banners">
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/3.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/4.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ban1.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ecsor2.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/gologomor.jpg") ?>"/>
-            </div>
+                    </div>
+                    <div class="banners">
+                        <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>"/>
+                        <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>"/>
+                        <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>"/>
+                        <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/3.gif") ?>"/>
+                        <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/4.gif") ?>"/>
+                        <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ban1.gif") ?>"/>
+                        <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ecsor2.gif") ?>"/>
+                        <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/gologomor.jpg") ?>"/>
+                    </div>
 
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 <?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/footer.php'); ?>
 

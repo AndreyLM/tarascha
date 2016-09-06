@@ -100,33 +100,38 @@ AppAsset::register($this);
 ]) ?>
 <?= Alert::widget() ?>
 
-<div class="container-fluid main_content">
-    <div class="row">
-        <div class="col-sm-9 col-md-10">
-            <?= $content ?>
-        </div>
+<div class="main_content">
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9 col-md-10">
+                    <?= $content ?>
+                </div>
 
-        <div class="col-sm-3 col-md-2">
-            <div class="main_header">
-                <h3 class="text-info text-left">
-                    <span class="glyphicon glyphicon-info-sign"></span>&nbsp;
-                    Корисні посилання:</h3>
+                <div class="col-sm-3 col-md-2">
+                    <div class="banner">
+                        <div class="main_header">
+                            <h3 class="text-info text-left">
+                                <span class="glyphicon glyphicon-info-sign"></span>&nbsp;
+                                Корисні посилання:</h3>
 
+                        </div>
+                        <div class="banners">
+                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>"/>
+                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>"/>
+                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>"/>
+                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/3.gif") ?>"/>
+                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/4.gif") ?>"/>
+                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ban1.gif") ?>"/>
+                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ecsor2.gif") ?>"/>
+                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/gologomor.jpg") ?>"/>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="banners">
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/3.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/4.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ban1.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ecsor2.gif") ?>"/>
-                <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/gologomor.jpg") ?>"/>
-            </div>
-
-        </div>
     </div>
 </div>
+
 
 <?php //echo \Yii::$app->view->renderFile('@app/views/layouts/partial/menu2.php'); ?>
 <?= Menu::widget() ?>
