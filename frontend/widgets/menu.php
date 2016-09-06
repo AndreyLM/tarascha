@@ -33,7 +33,7 @@ class Menu extends Widget
             echo '<a data-value="' . $menu->id . '"';
             if ($menu->type == 'root') {
                 echo 'href="#main_menu">';
-            } elseif ($menu->type == 'category') {
+            } elseif ('category'==$menu->type) {
                 echo 'href="' . Url::to(['/site/articles', 'id' => $menu->categoryId_articleSlug]) . '">';
             } elseif ($menu->type == 'documents'){
                 echo 'href="' . Url::to('/site/documents') . '">';
