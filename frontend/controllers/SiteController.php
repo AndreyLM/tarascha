@@ -115,6 +115,7 @@ class SiteController extends Controller
         if (($model = Article::findOne(['slug' => $slug])) !== null) {
             return $this->render('article', ['model' => $model]);
         } else {
+//            echo 'The requested page wasn\'t found';
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
@@ -134,6 +135,7 @@ class SiteController extends Controller
 
             return $this->render('search', ['models' => $models, 'pages' => $pages]);
         } else {
+//            echo 'The requested page wasn\'t found';
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
@@ -152,7 +154,7 @@ class SiteController extends Controller
 
             return $this->render('articles', ['models' => $models, 'pages' => $pages]);
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            echo 'The requested page wasn\'t found';
         }
     }
 

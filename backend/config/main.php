@@ -11,7 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'gallery' => [
+            'class' => 'onmotion\gallery\Module',
+        ],
+    ],
     'homeUrl' => '/admin',
     'components' => [
         'request' => [

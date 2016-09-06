@@ -34,6 +34,7 @@
                     ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug']],
                     ['label' => 'File Manager', 'icon' => 'fa fa-folder-open', 'url' => ['/site/media-manager']],
+                    ['label' => 'Photo gallery', 'icon' => 'fa fa-picture-o', 'url' => ['/gallery']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'Menus',

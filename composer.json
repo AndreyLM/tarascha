@@ -21,7 +21,8 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "yiidoc/yii2-redactor": "*",
         "2amigos/yii2-ckeditor-widget": "~1.0",
-        "mihaildev/yii2-elfinder": "*"
+        "mihaildev/yii2-elfinder": "*",
+        "onmotion/yii2-gallery": "*"
 
     },
     "require-dev": {
