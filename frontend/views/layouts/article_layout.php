@@ -13,6 +13,7 @@ use yii\helpers\Url;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use frontend\widgets\Menu;
+use frontend\widgets\LastNews;
 
 
 
@@ -137,16 +138,17 @@ AppAsset::register($this);
 <?= Menu::widget() ?>
 
 <hr>
-<div class="container main_header">
+<div class="container">
     <div class="row">
         <h3 class="text-info text-uppercase">
             <span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;
             Останні новини
         </h3>
         <hr>
-        <div class="main_text">
-            
-        </div>
+    </div>
+
+    <div class="row">
+        <?= LastNews::widget() ?>
     </div>
 
 </div>
