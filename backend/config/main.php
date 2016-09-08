@@ -17,7 +17,7 @@ return [
             'view' => [
                 'theme' => [
                     'pathMap' => [
-                        '@vendor/onmotion/yii2-gallery/views' => '@backend/views/gallery', // example: @app/views/gallery/default/index.php
+                        '@vendor/onmotion/yii2-gallery/views' => '@backend/views/gallery/default', // example: @app/views/gallery/default/index.php
                     ],
                 ],
             ],
