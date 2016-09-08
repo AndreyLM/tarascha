@@ -67,10 +67,11 @@ $this->title = 'Таращанська РДА';
 
 
                         <p> <?= $kiev[$j]->intro_text ?></p>
-                        <?php $j++; ?>
+
                     </div>
                     <a class="read_more"
                        href="<?= \yii\helpers\Url::to(['site/article', 'slug' => $kiev[$j]->slug]) ?>">детальніше...</a>
+                    <?php $j++; ?>
 
                 </div>
                 <div class="col-md-6">
