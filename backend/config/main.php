@@ -14,6 +14,13 @@ return [
     'modules' => [
         'gallery' => [
             'class' => 'onmotion\gallery\Module',
+            'view' => [
+                'theme' => [
+                    'pathMap' => [
+                        '@vendor/onmotion/yii2-gallery/views' => '@backend/views/gallery', // example: @app/views/gallery/default/index.php
+                    ],
+                ],
+            ],
         ],
     ],
     'homeUrl' => '/admin',
