@@ -1,0 +1,34 @@
+.map {
+    position: relative;
+    background-color: grey;
+    min-height: 500px;
+}
+
+#img1 {
+    position: absolute;
+
+}
+
+#img2 {
+    position: absolute;
+}
+#img3 {
+    position: absolute;
+}
+
+#img4 {
+    position: absolute;
+    top: 0;
+    left: 300px;
+}
+
+#img4:hover {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    opacity: 0.5;
+}
+
+#img5 {
+    position: absolute;
+}

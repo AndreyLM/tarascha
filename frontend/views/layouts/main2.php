@@ -188,6 +188,7 @@ AppAsset::register($this);
     </div>
 </div>
 
+<?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/map.php'); ?>
 
 <?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/footer.php'); ?>
 
