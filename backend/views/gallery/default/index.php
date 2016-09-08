@@ -7,7 +7,7 @@ use yii\bootstrap\Modal;
 /* @var $searchModel onmotion\gallery\models\GallerySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Photo-gallery';
+$this->title = 'PhotoGallery';
 $dataProvider->pagination->pageSize = 20;
 ?>
 <div class="gallery-index">

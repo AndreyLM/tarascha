@@ -14,13 +14,6 @@ return [
     'modules' => [
         'gallery' => [
             'class' => 'onmotion\gallery\Module',
-            'view' => [
-                'theme' => [
-                    'pathMap' => [
-                        '@vendor/onmotion/yii2-gallery/views' => '@backend/views/gallery/default', // example: @app/views/gallery/default/index.php
-                    ],
-                ],
-            ],
         ],
     ],
     'homeUrl' => '/admin',
@@ -48,6 +41,13 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@vendor/onmotion/yii2-gallery/views' => '@backend/views/gallery', // example: @app/views/gallery/default/index.php
+                ],
+            ],
         ],
         'request' => [
             'baseUrl' => '/admin',
