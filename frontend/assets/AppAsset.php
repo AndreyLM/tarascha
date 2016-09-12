@@ -14,6 +14,7 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/custom_media.css',
+        'css/map.css',
     ];
     public $js = [
         'js/main.js',
