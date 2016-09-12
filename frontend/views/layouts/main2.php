@@ -35,7 +35,7 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/map.php'); ?>
+
 <header>
 
     <nav class="navbar navbar-inverse " id="mainNav">
@@ -190,7 +190,7 @@ AppAsset::register($this);
 </div>
 
 
-
+<?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/map.php'); ?>
 <?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/footer.php'); ?>
 
 

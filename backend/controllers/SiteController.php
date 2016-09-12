@@ -26,7 +26,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'media-manager'],
+                        'actions' => ['logout', 'index', 'media-manager', 'gallery'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -51,6 +51,11 @@ class SiteController extends Controller
                 'class' => 'yii\web\ErrorAction',
             ],
         ];
+    }
+
+    public function actionGallery()
+    {
+        return $this->render('gallery');
     }
 
     /**

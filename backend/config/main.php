@@ -13,9 +13,14 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         'gallery' => [
-            'class' => 'onmotion\gallery\Module',
+            'class' => 'sadovojav\gallery\Module',
+            'basePath' => '@webroot'
         ],
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ]
     ],
+
     'homeUrl' => '/admin',
     'components' => [
         'request' => [
