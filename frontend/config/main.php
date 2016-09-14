@@ -11,10 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-	'homeUrl' => '/',
+	'homeUrl' => '',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'baseUrl' => '',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -38,11 +39,6 @@ return [
             'errorAction' => 'site/error',
         ],
 
-       
-   
-        'request' => [
-            'baseUrl' => '',
-        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,

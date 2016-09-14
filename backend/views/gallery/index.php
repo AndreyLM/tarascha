@@ -10,7 +10,6 @@ $this->params['breadcrumbs'] = [
 ];
 
 ?>
-
 <div class="gallery-index">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

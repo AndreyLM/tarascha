@@ -1,5 +1,8 @@
 @media(max-width:767px){
-
+    /*.gallery-thumb-img {*/
+        /*max-height: 300px;*/
+        /*min-height: 300px;*/
+    /*}*/
 }
 
 @media(min-width:768px){
@@ -14,6 +17,13 @@
         line-height: 20px;
         font-size: small;
     }
+
+    .gallery-thumb-img {
+        max-height: 200px;
+        min-height: 200px;
+    }
+
+
 }
 
 @media(min-width:992px){

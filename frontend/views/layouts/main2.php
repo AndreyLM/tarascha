@@ -70,24 +70,24 @@ AppAsset::register($this);
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Новини <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?= Url::to(['site/articles', 'id' => 4]) ?>">Новини Таращанщини</a></li>
-                            <li><a href="<?= Url::to(['site/articles', 'id' => 6]) ?>">Новини Київщини</a></li>
+                            <li><a href="<?= Url::to(['/site/articles', 'id' => 4]) ?>">Новини Таращанщини</a></li>
+                            <li><a href="<?= Url::to(['/site/articles', 'id' => 6]) ?>">Новини Київщини</a></li>
 
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Медіа <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Фотогалерея</a></li>
+                            <li><a href="<?= Url::to('/site/galleries') ?>">Фотогалерея</a></li>
                             <li><a href="#">Відеогалерея</a></li>
 
                         </ul>
                     </li>
-                    <li><a href="<?= Url::to(['site/article', 'slug' => 'ogolosenna']) ?>">Оголошення</a></li>
+                    <li><a href="<?= Url::to(['/site/article', 'slug' => 'ogolosenna']) ?>">Оголошення</a></li>
                     <li>
-                        <a href="<?= Url::to(['site/article', 'slug' => 'naavni-vakansii-v-tarasanskij-rajonnij-derzavnij-administracii']) ?>">Вакансії</a>
+                        <a href="<?= Url::to(['/site/article', 'slug' => 'naavni-vakansii-v-tarasanskij-rajonnij-derzavnij-administracii']) ?>">Вакансії</a>
                     </li>
-                    <li><a href="<?= Url::to(['site/article', 'slug' => 'kontakti']) ?>">Контакти</a></li>
+                    <li><a href="<?= Url::to(['/site/article', 'slug' => 'kontakti']) ?>">Контакти</a></li>
 
                 </ul>
 
@@ -108,7 +108,7 @@ AppAsset::register($this);
                             -o-background-size: cover;
                             background-size: cover;">
 
-                            <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][0]['slug']]) ?>">
+                            <a href="<?= Url::to(['/site/article', 'slug' => $this->params['ann_articles'][0]['slug']]) ?>">
                                 <h4 class="announce-header"><?= $this->params['ann_articles'][0]['title'] ?></h4>
                             </a>
                         </div>
@@ -124,7 +124,7 @@ AppAsset::register($this);
                                     -o-background-size: cover;
                                     background-size: cover;">
 
-                                    <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][1]['slug']]) ?>">
+                                    <a href="<?= Url::to(['/site/article', 'slug' => $this->params['ann_articles'][1]['slug']]) ?>">
                                         <h4 class="announce-header"><?= $this->params['ann_articles'][1]['title'] ?></h4>
                                     </a>
                                 </div>
@@ -138,7 +138,7 @@ AppAsset::register($this);
                                     -o-background-size: cover;
                                     background-size: cover;">
 
-                                    <a href="<?= Url::to(['site/article', 'slug' => $this->params['ann_articles'][2]['slug']]) ?>">
+                                    <a href="<?= Url::to(['/site/article', 'slug' => $this->params['ann_articles'][2]['slug']]) ?>">
                                         <h4 class="announce-header"><?= $this->params['ann_articles'][2]['title'] ?></h4>
                                     </a>
                                 </div>

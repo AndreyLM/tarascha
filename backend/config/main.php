@@ -14,17 +14,19 @@ return [
     'modules' => [
         'gallery' => [
             'class' => 'sadovojav\gallery\Module',
-            'basePath' => '@webroot'
+
+//            'basePath' => '@webroot'
         ],
         'gridview' =>  [
             'class' => '\kartik\grid\Module'
         ]
     ],
 
-    'homeUrl' => '/admin',
+    'homeUrl' => '',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'baseUrl' => '/admin',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -50,13 +52,11 @@ return [
         'view' => [
             'theme' => [
                 'pathMap' => [
-                    '@vendor/onmotion/yii2-gallery/views' => '@backend/views/gallery', // example: @app/views/gallery/default/index.php
+                    '@sadovojav/gallery/views' => '@backend/views'
                 ],
             ],
         ],
-        'request' => [
-            'baseUrl' => '/admin',
-        ],
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,

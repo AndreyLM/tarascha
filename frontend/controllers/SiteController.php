@@ -19,6 +19,8 @@ use common\models\Article;
 use common\models\Announce;
 use common\models\Menu;
 use yii\web\NotFoundHttpException;
+use sadovojav\gallery\models\GalleryFile;
+use sadovojav\gallery\models\Gallery;
 
 
 /**
@@ -237,6 +239,24 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionGallery($id)
+    {
+        $this->layout = "article_layout.php";
+
+        $model = GalleryFile::find()->where(['galleryId' => $id])->orderBy('position')->asArray()->all();
+        $title = Gallery::find()->where(['id' => $id])->one();
+
+        return $this->render('gallery', ['model' => $model, 'title' => $title->name]);
+    }
+
+    public function actionGalleries()
+    {
+        $this->layout = "article_layout.php";
+
+        $model = Gallery::find()->where(['status' => 1])->all();
+        return $this->render('galleries', ['model' => $model, 'title' => 'Фотогалерея']);
     }
 
     /**

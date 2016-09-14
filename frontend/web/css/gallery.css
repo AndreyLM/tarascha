@@ -1,0 +1,22 @@
+.prev, .next {
+    font-size: 50px!important;
+    line-height: 40px!important;
+}
+
+.gallery-thumb-img {
+    position: relative;
+    margin-top: 15px;
+    max-height: 400px;
+    min-height: 400px;
+}
+
+
+.gallery-thumb-caption {
+    position: absolute;
+    text-align: center;
+    padding: 3px;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.7);
+}
