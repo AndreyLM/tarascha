@@ -101,6 +101,10 @@ a.desc:after {
     padding: 8px;
 }
 
+.file-manager {
+    min-height: 500px;
+}
+
 @media(max-width:768px) {
 	.nav li > form {
 	    padding: 3px;
