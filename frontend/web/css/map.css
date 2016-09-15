@@ -25,9 +25,9 @@
 }
 
 .map-img {
-    opacity: 0.5;
+    opacity: 0.8;
     -webkit-filter: drop-shadow(1px 1px 5px black) drop-shadow(-1px -1px 5px black);
-    filter: drop-shadow(1px 1px 5px black) drop-shadow(-1px -1px 5px black);
+    filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
 }
 
 #img1 {
