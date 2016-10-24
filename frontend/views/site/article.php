@@ -12,6 +12,7 @@ $this->title = $model->title;
         <span class="glyphicon glyphicon-bookmark"></span>&nbsp;&nbsp;
         <?= $model->title ?>
     </h3>
+    <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($model->created_at, 'd-M-Y') ?></i></p>
 </div>
 
 <div class="main_text">
