@@ -6,6 +6,7 @@ use Yii;
 use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "article".
@@ -44,6 +45,7 @@ class Article extends \yii\db\ActiveRecord
             [['category_id', 'intro_text', 'isActive', 'isFavorite', 'title'], 'required'],
             [['category_id', 'isActive', 'isFavorite'], 'integer'],
             [['intro_text', 'full_text', 'title'], 'string'],
+            [['created_at'], 'safe'],
             [['tags'], 'string', 'max' => 255],
             [['img'], 'string', 'max' => 255],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'category_id']],
@@ -62,8 +64,10 @@ class Article extends \yii\db\ActiveRecord
             ],
             [
                 'class' => TimestampBehavior::className(),
-                'createdAtAttribute' => 'created_at',
-                'updatedAtAttribute' => 'updated_at',
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => 'created_at',
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updated_at',
+                ],
                 'value' => new Expression('NOW()'),
             ],
         ];
@@ -89,6 +93,7 @@ class Article extends \yii\db\ActiveRecord
         ];
     }
 
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -96,6 +101,7 @@ class Article extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Category::className(), ['category_id' => 'category_id']);
     }
+
 
     /**
      * @return \yii\db\ActiveQuery

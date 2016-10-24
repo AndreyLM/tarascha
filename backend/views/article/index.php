@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'filterModel' => $searchModel,
                     'columns' => [
                         ['class' => 'yii\grid\SerialColumn'],
-
+                        ['class' => 'yii\grid\ActionColumn'],
                         'id',
                         'category_id',
                         [
@@ -44,7 +44,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         'isActive',
                         'isFavorite',
 
-                        ['class' => 'yii\grid\ActionColumn'],
                     ],
                 ]); ?>
             </div>

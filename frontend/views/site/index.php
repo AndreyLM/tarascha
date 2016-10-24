@@ -23,6 +23,7 @@ $this->title = 'Таращанська РДА';
                     <div class="home_article">
                         <img width="100%" src="<?= strip_tags($tar[$j]->img) ?>"/>
                         <h4><?= $tar[$j]->title ?></h4>
+                        <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($tar[$j]->created_at, 'd-M-Y') ?></i></p>
 
                         <p> <?= $tar[$j]->intro_text ?></p>
                     </div>
@@ -33,6 +34,7 @@ $this->title = 'Таращанська РДА';
                     <div class="home_article">
                         <img width="100%" src="<?= strip_tags($tar[$j]->img) ?>"/>
                         <h4><?= $tar[$j]->title ?></h4>
+                        <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($tar[$j]->created_at, 'd-M-Y') ?></i></p>
 
                         <p> <?= $tar[$j]->intro_text ?></p>
 
@@ -64,7 +66,7 @@ $this->title = 'Таращанська РДА';
                     <div class="home_article">
                         <img width="100%" src="<?= strip_tags($kiev[$j]->img) ?>"/>
                         <h4><?= $kiev[$j]->title ?></h4>
-
+                        <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($kiev[$j]->created_at, 'd-M-Y') ?></i></p>
 
                         <p> <?= $kiev[$j]->intro_text ?></p>
 
@@ -78,6 +80,7 @@ $this->title = 'Таращанська РДА';
                     <div class="home_article">
                         <img width="100%" src="<?= strip_tags($kiev[$j]->img) ?>"/>
                         <h4><?= $kiev[$j]->title ?></h4>
+                        <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($kiev[$j]->created_at, 'd-M-Y') ?></i></p>
 
 
                         <p> <?= $kiev[$j]->intro_text ?></p>

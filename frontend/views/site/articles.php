@@ -28,6 +28,7 @@ $this->title = $models[0]->category->title;
                     <img src="<?= strip_tags($model->img) ?>" width="100%"/>
                 <?php endif; ?>
                 <h4><?= $model->title ?></h4>
+                <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($model->created_at, 'd-M-Y') ?></i></p>
 
 
                 <p> <?= $model->intro_text ?></p>
