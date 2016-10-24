@@ -13,6 +13,7 @@ use yii\helpers\Url;
 use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use frontend\widgets\Menu;
+use frontend\widgets\Banners;
 
 
 AppAsset::register($this);
@@ -173,6 +174,7 @@ AppAsset::register($this);
 
                     </div>
                     <div class="banners">
+                        <?= Banners::widget() ?>
                         <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>"/>
                         <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>"/>
                         <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>"/>
