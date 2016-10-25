@@ -175,7 +175,7 @@ AppAsset::register($this);
                     </div>
                     <div class="banners">
                         <?= Banners::widget() ?>
-                        
+
                     </div>
 
                 </div>
