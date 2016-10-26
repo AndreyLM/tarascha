@@ -14,6 +14,7 @@ use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use frontend\widgets\Menu;
 use frontend\widgets\Banners;
+use frontend\widgets\Phone;
 
 
 AppAsset::register($this);
@@ -153,7 +154,10 @@ AppAsset::register($this);
 
 
             <div class="col-md-4 no-margin-padding">
-                <?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/email_phones.php'); ?>
+                <div class="side_bar">
+                    <?php echo \Yii::$app->view->renderFile('@app/views/layouts/partial/email_phones.php'); ?>
+                    <?= Phone::widget() ?>
+                </div>
             </div>
         </div>
     </div>

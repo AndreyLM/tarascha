@@ -36,6 +36,7 @@
                     ['label' => 'File Manager', 'icon' => 'fa fa-folder-open', 'url' => ['/site/media-manager']],
                     ['label' => 'Photo gallery', 'icon' => 'fa fa-picture-o', 'url' => ['/gallery/gallery/index']],
                     ['label' => 'Banners', 'icon' => 'fa fa-share', 'url' => ['/banner/index']],
+                    ['label' => 'Phones', 'icon' => 'fa fa-share', 'url' => ['/phone/index']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'Menus',
