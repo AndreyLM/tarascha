@@ -23,6 +23,11 @@
         min-height: 200px;
     }
 
+    .article-main-photo {
+        height: 200px;
+        border: 5px solid yellow;
+    }
+
 
 }
 

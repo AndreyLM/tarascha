@@ -365,4 +365,7 @@ a.desc:after {
     width: 100%;
 }
 
+.article-main-photo {
+    height: 300px;
+}
 

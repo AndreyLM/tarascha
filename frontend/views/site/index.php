@@ -21,7 +21,15 @@ $this->title = 'Таращанська РДА';
             <div class="row vertical-divider-right">
                 <div class="col-md-6">
                     <div class="home_article">
-                        <img width="100%" src="<?= strip_tags($tar[$j]->img) ?>"/>
+                        <div class="article-main-photo" style="position:relative; width: 100%;
+                            background: url(<?= strip_tags($tar[$j]->img) ?>) no-repeat center;
+                            -webkit-background-size: cover;
+                            -moz-background-size: cover;
+                            -o-background-size: cover;
+                            background-size: cover;">
+
+                        </div>
+
                         <h4><?= $tar[$j]->title ?></h4>
                         <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($tar[$j]->created_at, 'd-M-Y') ?></i></p>
 
@@ -32,7 +40,14 @@ $this->title = 'Таращанська РДА';
                 </div>
                 <div class="col-md-6">
                     <div class="home_article">
-                        <img width="100%" src="<?= strip_tags($tar[$j]->img) ?>"/>
+                        <div class="article-main-photo" style="width: 100%;
+                            background: url(<?= strip_tags($tar[$j]->img) ?>) no-repeat center;
+                            -webkit-background-size: cover;
+                            -moz-background-size: cover;
+                            -o-background-size: cover;
+                            background-size: cover;">
+
+                        </div>
                         <h4><?= $tar[$j]->title ?></h4>
                         <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($tar[$j]->created_at, 'd-M-Y') ?></i></p>
 
