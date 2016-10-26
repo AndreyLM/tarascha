@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\LegalDocuments */
 
-$this->title = 'Update Legal Documents: ' . $model->title;
+$this->title = 'Нормативно-правові документи - оновити ';
 $this->params['breadcrumbs'][] = ['label' => 'Legal Documents', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => $model->year.' - ', $model->month, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="legal-documents-update">

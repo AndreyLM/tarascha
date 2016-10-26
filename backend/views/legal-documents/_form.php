@@ -15,12 +15,12 @@ use mihaildev\elfinder\ElFinder;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'title')->widget(CKEditor::className(), [
-        'options' => ['rows'=>1],
+        'options' => ['rows'=>3],
         'preset' => 'full',
         'clientOptions' => ElFinder::ckeditorOptions(['elfinder']),
     ]) ?>
 
-    <?= $form->field($model, 'type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'type')->dropDownList(['розпорядження' => 'Розпорядження', 'доручення' => 'Доручення']) ?>
 
     <?= $form->field($model, 'year')->textInput() ?>
 

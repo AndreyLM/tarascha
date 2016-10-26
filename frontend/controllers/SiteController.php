@@ -162,17 +162,51 @@ class SiteController extends Controller
 
     public function actionDocuments()
     {
+
         $this->layout = "article_layout.php";
 
-        $model = new LegalDocuments();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $result = '' ;
+        if (isset($_POST['title']) && isset($_POST['type']) && isset($_POST['year']) && isset($_POST['month'])) {
+            $model = $this->searchDocuments($_POST['title'], $_POST['type'], $_POST['year'], $_POST['month']);
+            foreach ($model as $docum) {
+                $result .= $docum->title;
+            }
+            preg_match_all('/<a.*>.*'.$_POST['title'].'.*<\/a>/', $result, $matches);
+            $result ='';
+            $i=1;
+            foreach ($matches[0] as $match) {
+                $result .= '<b>'.$i++.')</b>&nbsp;&nbsp;&nbsp;'.$match.'</br></br>';
+            }
         } else {
-            return $this->render('documents', [
-                'model' => $model,
-            ]);
+            $result = "Введіть текст для пошуку, а також виберіть критерії пошуку";
         }
+
+
+
+        return $this->render('documents', [
+            'model' => $result,
+        ]);
+    }
+
+    private function searchDocuments($search, $type, $year, $month)
+    {
+
+        $query = LegalDocuments::find();
+
+        if ($year != '0') {
+            $query->andFilterWhere(['like', 'year', $year]);
+        }
+
+        if ($month != '0') {
+            $query->andFilterWhere(['like', 'month', $month]);
+        }
+
+
+        if ($type != 'Всі документи') {
+            $query->andFilterWhere(['like', 'type', $type]);
+        }
+
+        return $query->all();
     }
 
     /**
@@ -249,6 +283,12 @@ class SiteController extends Controller
         $title = Gallery::find()->where(['id' => $id])->one();
 
         return $this->render('gallery', ['model' => $model, 'title' => $title->name]);
+    }
+
+    public function actionReqular()
+    {
+        $this->layout = "article_layout.php";
+        return $this->render('reqular');
     }
 
     public function actionGalleries()

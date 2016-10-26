@@ -31,7 +31,7 @@ class LegalDocuments extends \yii\db\ActiveRecord
         return [
             [['title', 'type', 'year', 'month'], 'required'],
             [['year', 'month'], 'integer'],
-            [['title'], 'string', 'max' => 256],
+            [['title'], 'string'],
             [['type'], 'string', 'max' => 64],
         ];
     }

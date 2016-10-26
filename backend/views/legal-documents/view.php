@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\LegalDocuments */
 
-$this->title = $model->title;
+$this->title = 'Нормативно-правові документи';
 $this->params['breadcrumbs'][] = ['label' => 'Legal Documents', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -24,12 +24,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-
+    
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
-            'title',
+
             'type',
             'year',
             'month',

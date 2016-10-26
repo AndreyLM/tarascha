@@ -24,7 +24,7 @@ $this->title = "Нормативні документи та доручення"
     <?= Html::beginForm(['/site/documents'], 'post') ?>
     <div class="row search-docs">
         <div class="col-sm-2"><?= Html::label('Текст для пошуку', '', ['class' => 'ld-search-form']) ?></div>
-        <div class="col-sm-8"> <?= Html::input('text', 'title', $model->title) ?></div>
+        <div class="col-sm-8"> <?= Html::input('text', 'title') ?></div>
         <div class="col-sm-offset-2"></div>
     </div>
 
@@ -33,8 +33,8 @@ $this->title = "Нормативні документи та доручення"
         <div class="col-sm-2"><?= Html::dropDownList('type', '',
                 [
                     'Всі документи' => 'Всі документи',
-                    'Розпорядження' => 'Розпорядження',
-                    'Доручення' => 'Доручення',
+                    'розпорядження' => 'Розпорядження',
+                    'доручення' => 'Доручення',
                 ]) ?>
         </div>
         <div class="col-sm-offset-8"></div>
@@ -83,6 +83,8 @@ $this->title = "Нормативні документи та доручення"
     </div>
 
     <?= Html::endForm() ?>
+
+    <?= $model ?>
 
 
 </div>
