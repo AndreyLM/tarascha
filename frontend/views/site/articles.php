@@ -25,7 +25,15 @@ $this->title = $models[0]->category->title;
             <div class="home_article">
                 <?php
                 if (!empty($model->img)):?>
-                    <img src="<?= strip_tags($model->img) ?>" width="100%"/>
+                    <div class="article-main-photo" style="position:relative; width: 100%;
+                        background: url(<?= strip_tags($model->img) ?>) no-repeat center;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;">
+
+                    </div>
+
                 <?php endif; ?>
                 <h4><?= $model->title ?></h4>
                 <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($model->created_at, 'd-M-Y') ?></i></p>
