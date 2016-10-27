@@ -17,10 +17,11 @@ $this->title = 'Таращанська РДА';
         <hr>
         <?php
         $j = 0;
-        for ($i = 1; $i <= 2; $i++): ?>
+        for ($i = 1; $i <= 3; $i++): ?>
             <div class="row vertical-divider-right">
                 <div class="col-md-6">
                     <div class="home_article">
+                        <?php if(!empty(strip_tags($tar[$j]->img))):?>
                         <div class="article-main-photo" style="position:relative; width: 100%;
                             background: url(<?= strip_tags($tar[$j]->img) ?>) no-repeat center;
                             -webkit-background-size: cover;
@@ -29,7 +30,7 @@ $this->title = 'Таращанська РДА';
                             background-size: cover;">
 
                         </div>
-
+                        <?php endif; ?>
                         <h4><?= $tar[$j]->title ?></h4>
                         <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($tar[$j]->created_at, 'd-M-Y') ?></i></p>
 
@@ -58,7 +59,7 @@ $this->title = 'Таращанська РДА';
                     <?php $j++; ?>
                 </div>
             </div>
-            <?php if (4 != $j) {?>
+            <?php if (5 != $j) {?>
                 <hr>
             <?php } ?>
         <?php endfor; ?>
@@ -75,11 +76,20 @@ $this->title = 'Таращанська РДА';
         <hr>
         <?php
         $j = 0;
-        for ($i = 1; $i <= 2; $i++): ?>
+        for ($i = 1; $i <= 3; $i++): ?>
             <div class="row vertical-divider-right">
                 <div class="col-md-6">
                     <div class="home_article">
-                        <img width="100%" src="<?= strip_tags($kiev[$j]->img) ?>"/>
+                        <?php if(!empty(strip_tags($kiev[$j]->img))):?>
+                            <div class="article-main-photo" style="position:relative; width: 100%;
+                                background: url(<?= strip_tags($kiev[$j]->img) ?>) no-repeat center;
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                background-size: cover;">
+
+                            </div>
+                        <?php endif; ?>
                         <h4><?= $kiev[$j]->title ?></h4>
                         <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($kiev[$j]->created_at, 'd-M-Y') ?></i></p>
 
@@ -93,7 +103,16 @@ $this->title = 'Таращанська РДА';
                 </div>
                 <div class="col-md-6">
                     <div class="home_article">
-                        <img width="100%" src="<?= strip_tags($kiev[$j]->img) ?>"/>
+                        <?php if(!empty(strip_tags($kiev[$j]->img))):?>
+                            <div class="article-main-photo" style="position:relative; width: 100%;
+                                background: url(<?= strip_tags($kiev[$j]->img) ?>) no-repeat center;
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                background-size: cover;">
+
+                            </div>
+                        <?php endif; ?>
                         <h4><?= $kiev[$j]->title ?></h4>
                         <p><i>Опубліковано: <?= Yii::$app->formatter->asDate($kiev[$j]->created_at, 'd-M-Y') ?></i></p>
 
@@ -106,8 +125,8 @@ $this->title = 'Таращанська РДА';
                     <?php $j++; ?>
                 </div>
             </div>
-            <?php if (4 != $j) {?>
-                <hr>
+            <?php if (5 != $j) {?>
+                <hr style="color: grey!important;">
             <?php } ?>
         <?php endfor; ?>
         <div class="row">
