@@ -14,6 +14,7 @@ use yii\widgets\Pjax;
 use yii\bootstrap\Modal;
 use frontend\widgets\Menu;
 use frontend\widgets\LastNews;
+use frontend\widgets\Banners;
 
 
 
@@ -117,14 +118,8 @@ AppAsset::register($this);
 
                         </div>
                         <div class="banners">
-                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/prezident.gif") ?>"/>
-                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/VRU.gif") ?>"/>
-                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/koda.jpg") ?>"/>
-                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/3.gif") ?>"/>
-                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/4.gif") ?>"/>
-                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ban1.gif") ?>"/>
-                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/ecsor2.gif") ?>"/>
-                            <img class="img_banner" src="<?= \yii\helpers\Url::to("@web/img/banners/gologomor.jpg") ?>"/>
+                            <?= Banners::widget() ?>
+
                         </div>
 
                     </div>
