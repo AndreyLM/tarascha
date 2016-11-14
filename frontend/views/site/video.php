@@ -6,7 +6,15 @@
  * Time: 9:55
  */
 ?>
+<div class="row">
 
-<object width="425" height="350" data="http://www.youtube.com/v/Ahg6qcgoay4" type="application/x-shockwave-flash">
-    <param name="src" value="http://www.youtube.com/v/Ahg6qcgoay4" />
-</object>
+    <?php foreach ($model as $video) : ?>
+        <div class="col-md-4">
+            <h4><?=$video->title?></h4>
+            <iframe width="100%" height="200px"
+                    src="https://www.youtube.com/embed/<?=$video->value?>"
+                    frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+    <?php endforeach; ?>
+</div>

@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use common\models\Category;
 use common\models\LegalDocuments;
+use common\models\Video;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -302,8 +303,8 @@ class SiteController extends Controller
     public function actionVideo()
     {
         $this->layout = "article_layout.php";
-
-        return $this->render('video');
+        $model = Video::find()->all();
+        return $this->render('video', ['model' => $model]);
     }
 
     /**

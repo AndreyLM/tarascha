@@ -35,6 +35,7 @@
                     ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug']],
                     ['label' => 'File Manager', 'icon' => 'fa fa-folder-open', 'url' => ['/site/media-manager']],
                     ['label' => 'Photo gallery', 'icon' => 'fa fa-picture-o', 'url' => ['/gallery/gallery/index']],
+                    ['label' => 'Video gallery', 'icon' => 'fa fa-picture-o', 'url' => ['/video/index']],
                     ['label' => 'Banners', 'icon' => 'fa fa-share', 'url' => ['/banner/index']],
                     ['label' => 'Phones', 'icon' => 'fa fa-share', 'url' => ['/phone/index']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
