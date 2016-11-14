@@ -1,10 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: ������
+ * User: Андрей
  * Date: 14.11.2016
  * Time: 9:55
  */
+
+$this->title = "Відеогалерея";
 ?>
 <div class="row">
 

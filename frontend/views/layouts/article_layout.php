@@ -81,7 +81,7 @@ AppAsset::register($this);
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Медіа <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="<?= Url::to('/site/galleries') ?>">Фотогалерея</a></li>
-                            <li><a href="#">Відеогалерея</a></li>
+                            <li><a href="<?= Url::to('/site/video') ?>">Відеогалерея</a></li>
 
                         </ul>
                     </li>
