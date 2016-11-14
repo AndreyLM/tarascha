@@ -299,6 +299,13 @@ class SiteController extends Controller
         return $this->render('galleries', ['model' => $model, 'title' => 'Фотогалерея']);
     }
 
+    public function actionVideo()
+    {
+        $this->layout = "article_layout.php";
+
+        return $this->render('video');
+    }
+
     /**
      * Signs user up.
      *
