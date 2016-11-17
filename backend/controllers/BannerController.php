@@ -8,6 +8,7 @@ use common\models\search\BannerSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * BannerController implements the CRUD actions for Banner model.
@@ -28,7 +29,12 @@ class BannerController extends Controller
             ],
         ];
     }
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
 
+    }
     /**
      * Lists all Banner models.
      * @return mixed

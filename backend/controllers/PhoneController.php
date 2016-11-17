@@ -8,6 +8,7 @@ use common\models\search\PhoneSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * PhoneController implements the CRUD actions for Phone model.
@@ -28,7 +29,12 @@ class PhoneController extends Controller
             ],
         ];
     }
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
 
+    }
     /**
      * Lists all Phone models.
      * @return mixed

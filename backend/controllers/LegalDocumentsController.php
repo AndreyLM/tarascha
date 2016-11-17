@@ -8,6 +8,7 @@ use common\models\search\LegalDocumentsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * LegalDocumentsController implements the CRUD actions for LegalDocuments model.
@@ -28,7 +29,12 @@ class LegalDocumentsController extends Controller
             ],
         ];
     }
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
 
+    }
     /**
      * Lists all LegalDocuments models.
      * @return mixed

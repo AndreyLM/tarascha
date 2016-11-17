@@ -91,6 +91,26 @@ AppAsset::register($this);
                     </li>
                     <li><a href="<?= Url::to(['/site/article', 'slug' => 'kontakti']) ?>">Контакти</a></li>
 
+                    <?php if (!Yii::$app->user->isGuest) {
+                        echo '<li class="dropdown">';
+                        echo '<a class="dropdown-toggle" data-toggle="dropdown" href="#">User panel <span class="caret"></span></a>';
+                        echo '<ul class="dropdown-menu">';
+                        echo '<li><a href="'.Url::to('/admin').'">Admin panel</a></li>';
+                        echo '<li>'
+                            .Html::beginForm(['/site/logout'], 'post')
+                            . Html::submitButton(
+                                'Logout (' . Yii::$app->user->identity->username . ')',
+                                ['class' => 'btn btn-link']
+                            )
+                            . Html::endForm()
+                            . '</li>';
+                        echo '</ul>';
+                        echo '</li>';
+                    } else { ?>
+                        <li><a href="<?= Url::to(['/site/login']) ?>"><i class="glyphicon glyphicon-log-in"></i></a></li>
+                    <?php } ?>
+
+
                 </ul>
 
             </div>

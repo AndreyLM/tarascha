@@ -8,6 +8,7 @@ use common\models\search\VideoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * VideoController implements the CRUD actions for Video model.
@@ -28,7 +29,12 @@ class VideoController extends Controller
             ],
         ];
     }
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
 
+    }
     /**
      * Lists all Video models.
      * @return mixed

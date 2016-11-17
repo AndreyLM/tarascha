@@ -8,6 +8,7 @@ use common\models\search\SearchMainCategory;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * MainCategoryController implements the CRUD actions for MainCategory model.
@@ -28,7 +29,12 @@ class MainCategoryController extends Controller
             ],
         ];
     }
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
 
+    }
     /**
      * Lists all MainCategory models.
      * @return mixed

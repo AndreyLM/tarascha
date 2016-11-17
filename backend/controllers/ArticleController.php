@@ -8,6 +8,7 @@ use common\models\search\ArticleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * ArticleController implements the CRUD actions for Article model.
@@ -29,6 +30,12 @@ class ArticleController extends Controller
         ];
     }
 
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
+
+    }
     /**
      * Lists all Article models.
      * @return mixed

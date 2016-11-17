@@ -8,6 +8,7 @@ use common\models\search\CategorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * CategoryController implements the CRUD actions for Category model.
@@ -28,7 +29,12 @@ class CategoryController extends Controller
             ],
         ];
     }
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
 
+    }
     /**
      * Lists all Category models.
      * @return mixed

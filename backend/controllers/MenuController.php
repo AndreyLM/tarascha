@@ -8,6 +8,7 @@ use common\models\search\MenuSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * MenuController implements the CRUD actions for Menu model.
@@ -28,7 +29,12 @@ class MenuController extends Controller
             ],
         ];
     }
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
 
+    }
     /**
      * Lists all Menu models.
      * @return mixed

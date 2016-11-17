@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Html;
+?>
 <aside class="main-sidebar">
 
     <section class="sidebar">
@@ -13,6 +16,15 @@
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
+        <?php if (!Yii::$app->user->isGuest) {
+            echo Html::beginForm(['/site/logout'], 'post')
+            . Html::submitButton(
+                '<i class="fa fa-sign-out"></i> Logout (' . Yii::$app->user->identity->username . ')',
+                ['class' => 'btn btn-link']
+            )
+            . Html::endForm()
+            . '</li>';
+        } ?>
 
         <!-- search form -->
         <form action="#" method="get" class="sidebar-form">
@@ -33,6 +45,7 @@
                     ['label' => 'Control panel', 'options' => ['class' => 'header']],
                     ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug']],
+                    ['label' => 'Log out', 'icon' => 'fa fa-sign-out', 'url' => ['/site/logout']],
                     ['label' => 'File Manager', 'icon' => 'fa fa-folder-open', 'url' => ['/site/media-manager']],
                     ['label' => 'Photo gallery', 'icon' => 'fa fa-picture-o', 'url' => ['/gallery/gallery/index']],
                     ['label' => 'Video gallery', 'icon' => 'fa fa-picture-o', 'url' => ['/video/index']],

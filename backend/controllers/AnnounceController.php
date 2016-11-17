@@ -8,6 +8,7 @@ use common\models\search\AnnounceSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\helpers\CheckAccess;
 
 /**
  * AnnounceController implements the CRUD actions for Announce model.
@@ -29,6 +30,12 @@ class AnnounceController extends Controller
         ];
     }
 
+    public function beforeAction()
+    {
+        parent::beforeAction($this->action);
+        return CheckAccess::Check();
+
+    }
     /**
      * Lists all Announce models.
      * @return mixed
