@@ -45,7 +45,6 @@ use yii\helpers\Html;
                     ['label' => 'Control panel', 'options' => ['class' => 'header']],
                     ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug']],
-                    ['label' => 'Log out', 'icon' => 'fa fa-sign-out', 'url' => ['/site/logout']],
                     ['label' => 'File Manager', 'icon' => 'fa fa-folder-open', 'url' => ['/site/media-manager']],
                     ['label' => 'Photo gallery', 'icon' => 'fa fa-picture-o', 'url' => ['/gallery/gallery/index']],
                     ['label' => 'Video gallery', 'icon' => 'fa fa-picture-o', 'url' => ['/video/index']],
