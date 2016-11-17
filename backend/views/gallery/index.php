@@ -12,7 +12,7 @@ $this->params['breadcrumbs'] = [
 
 ?>
 <div class="gallery-index">
-    <?php echo '<iframe width="300px" height="300px" src="//www.youtube.com/embed/4Tr0otuiQuU?list=RDKmzFDEu2RoA" frameborder="0" allowfullscreen></iframe>'; ?>
+    
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
