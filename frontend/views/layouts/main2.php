@@ -93,13 +93,13 @@ AppAsset::register($this);
 
                     <?php if (!Yii::$app->user->isGuest) {
                         echo '<li class="dropdown">';
-                        echo '<a class="dropdown-toggle" data-toggle="dropdown" href="#">User panel <span class="caret"></span></a>';
+                        echo '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i></a>';
                         echo '<ul class="dropdown-menu">';
                         echo '<li><a href="'.Url::to('/admin').'">Admin panel</a></li>';
                         echo '<li>'
                             .Html::beginForm(['/site/logout'], 'post')
                             . Html::submitButton(
-                                'Logout (' . Yii::$app->user->identity->username . ')',
+                                '<i class="glyphicon glyphicon-log-out"></i> (' . Yii::$app->user->identity->username . ')',
                                 ['class' => 'btn btn-link']
                             )
                             . Html::endForm()

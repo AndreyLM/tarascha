@@ -9,10 +9,11 @@ $this->title = Module::t('default', 'GALLERY_MANAGER');
 $this->params['breadcrumbs'] = [
     Module::t('default', 'GALLERIES')
 ];
-
 ?>
+
+
 <div class="gallery-index">
-    
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
