@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\ckeditor\CKEditor;
 use mihaildev\elfinder\ElFinder;
+use yii\widgets\LinkPager;
 
 $this->title = "Нормативні документи та доручення";
 
@@ -24,13 +25,13 @@ $this->title = "Нормативні документи та доручення"
     <?= Html::beginForm(['/site/documents'], 'post') ?>
     <div class="row search-docs">
         <div class="col-sm-2"><?= Html::label('Текст для пошуку', '', ['class' => 'ld-search-form']) ?></div>
-        <div class="col-sm-8"> <?= Html::input('text', 'title') ?></div>
+        <div class="col-sm-8"> <?= Html::input('text', 'title', Yii::$app->session->get('title')) ?></div>
         <div class="col-sm-offset-2"></div>
     </div>
 
     <div class="row search-docs">
         <div class="col-sm-2"><?= Html::label('Тип документу', '', ['class' => 'ld-search-form']) ?></div>
-        <div class="col-sm-2"><?= Html::dropDownList('type', '',
+        <div class="col-sm-2"><?= Html::dropDownList('type', Yii::$app->session->get('type'),
                 [
                     'Всі документи' => 'Всі документи',
                     'розпорядження' => 'Розпорядження',
@@ -43,7 +44,7 @@ $this->title = "Нормативні документи та доручення"
     <div class="row search-docs">
         <div class="col-sm-2"><?= Html::label('Рік', '', ['class' => 'ld-search-form']) ?></div>
         <div class="col-sm-2">
-            <?= Html::dropDownList('year', '',
+            <?= Html::dropDownList('year', Yii::$app->session->get('year'),
                 [
                     '0' => 'За всі роки',
                     '2015' => '2015',
@@ -58,7 +59,7 @@ $this->title = "Нормативні документи та доручення"
 
     <div class="row search-docs">
         <div class="col-sm-2"><?= Html::label('Місяць', '', ['class' => 'ld-search-form']) ?></div>
-        <div class="col-sm-2"><?= Html::dropDownList('month', '',
+        <div class="col-sm-2"><?= Html::dropDownList('month', Yii::$app->session->get('month'),
                 [
                     '0' => 'За всі місяці',
                     '1' => 'Січень',
@@ -85,6 +86,9 @@ $this->title = "Нормативні документи та доручення"
     <?= Html::endForm() ?>
 
     <?= $model ?>
+    <?= LinkPager::widget([
+        'pagination' => $pages,
+    ]) ?>
 
 
 </div>

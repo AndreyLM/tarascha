@@ -78,7 +78,8 @@ class SiteController extends Controller
 
     public $layout = "main2.php";
 
-    public function actionMainLayout(){
+    public function actionMainLayout()
+    {
         $this->layout = "main2.php";
         return $this->render('index');
     }
@@ -93,15 +94,14 @@ class SiteController extends Controller
 
         $ann = Announce::find()->all();
 
-        foreach($ann as $announce) {
-            $arr=[];
+        foreach ($ann as $announce) {
+            $arr = [];
             $article = Article::findOne(['id' => $announce->article_id]);
-            $arr['img']=strip_tags($article->img);
-            $arr['title']=$article->title;
-            $arr['slug']=$article->slug;
+            $arr['img'] = strip_tags($article->img);
+            $arr['title'] = $article->title;
+            $arr['slug'] = $article->slug;
             $this->view->params['ann_articles'][] = $arr;
         }
-
 
 
         $tar = Article::find()->where(['category_id' => 4, 'isFavorite' => 1, 'isActive' => 1])->orderBy('created_at DESC')->all();
@@ -163,33 +163,63 @@ class SiteController extends Controller
 
     public function actionDocuments()
     {
-
         $this->layout = "article_layout.php";
+        $result = '';
+        $matches = [];
 
-        $result = '' ;
-        if (isset($_POST['title']) && isset($_POST['type']) && isset($_POST['year']) && isset($_POST['month'])) {
-            $model = $this->searchDocuments($_POST['title'], $_POST['type'], $_POST['year'], $_POST['month']);
+        if (Yii::$app->request->isPost) {
+            if (isset($_POST['title']) && isset($_POST['type']) && isset($_POST['year']) && isset($_POST['month'])) {
+                $model = $this->searchDocuments($_POST['type'], $_POST['year'], $_POST['month']);
+                foreach ($model as $docum) {
+                    $result .= $docum->title;
+                }
+                preg_match_all('/<a.*>.*' . $_POST['title'] . '.*<\/a>/', $result, $matches);
+                $session = Yii::$app->session;
+                $session->set('title', $_POST['title']);
+                $session->set('type', $_POST['type']);
+                $session->set('year', $_POST['year']);
+                $session->set('month', $_POST['month']);
+                $session->set('documents', $matches);
+
+            } else {
+                $result = "Введіть текст для пошуку, а також виберіть критерії пошуку";
+            }
+        } elseif (null !== Yii::$app->session->get('documents') ) {
+
+            $matches = Yii::$app->session->get('documents');
+
+        } else {
+            $model = $this->searchDocuments('Всі документи', 0, 0);
             foreach ($model as $docum) {
                 $result .= $docum->title;
             }
-            preg_match_all('/<a.*>.*'.$_POST['title'].'.*<\/a>/', $result, $matches);
-            $result ='';
-            $i=1;
-            foreach ($matches[0] as $match) {
-                $result .= '<b>'.$i++.')</b>&nbsp;&nbsp;&nbsp;'.$match.'</br></br>';
-            }
-        } else {
-            $result = "Введіть текст для пошуку, а також виберіть критерії пошуку";
+            preg_match_all('/<a.*>.*.*<\/a>/', $result, $matches);
         }
 
+
+        $pages = new Pagination();
+
+        if (isset($matches[0])) {
+
+            $pages->totalCount = count($matches[0]);
+            $pages->pageSize = 20;
+            $pages->pageSizeParam = false;
+            $model = array_slice($matches[0], $pages->offset, $pages->pageSize);
+            $result = '';
+            $i = 1+$pages->getPage()*$pages->pageSize;
+            foreach ($model as $match) {
+                $result .= '<b>' . $i++. ')</b>&nbsp;&nbsp;&nbsp;' . $match . '</br></br>';
+            }
+        }
 
 
         return $this->render('documents', [
             'model' => $result,
+            'pages' => $pages,
         ]);
     }
 
-    private function searchDocuments($search, $type, $year, $month)
+    private function searchDocuments($type, $year, $month)
     {
 
         $query = LegalDocuments::find();
@@ -217,7 +247,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        $this->layout ='main';
+        $this->layout = 'main';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -287,11 +317,6 @@ class SiteController extends Controller
         return $this->render('gallery', ['model' => $model, 'title' => $title->name]);
     }
 
-    public function actionReqular()
-    {
-        $this->layout = "article_layout.php";
-        return $this->render('reqular');
-    }
 
     public function actionGalleries()
     {
@@ -353,6 +378,7 @@ class SiteController extends Controller
         ]);
     }
 
+
     /**
      * Resets password.
      *
@@ -360,6 +386,8 @@ class SiteController extends Controller
      * @return mixed
      * @throws BadRequestHttpException
      */
+
+
     public function actionResetPassword($token)
     {
         try {

@@ -88,7 +88,24 @@ AppAsset::register($this);
                     <li><a href="<?= Url::to(['site/article', 'slug' => 'ogolosenna'])?>">Оголошення</a></li>
                     <li><a href="<?= Url::to(['site/article', 'slug' => 'naavni-vakansii-v-tarasanskij-rajonnij-derzavnij-administracii'])?>">Вакансії</a></li>
                     <li><a href="<?= Url::to(['site/article', 'slug' => 'kontakti'])?>">Контакти</a></li>
-
+                    <?php if (!Yii::$app->user->isGuest) {
+                        echo '<li class="dropdown">';
+                        echo '<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i></a>';
+                        echo '<ul class="dropdown-menu">';
+                        echo '<li><a href="'.Url::to('/admin').'">Admin panel</a></li>';
+                        echo '<li>'
+                            .Html::beginForm(['/site/logout'], 'post')
+                            . Html::submitButton(
+                                '<i class="glyphicon glyphicon-log-out"></i> (' . Yii::$app->user->identity->username . ')',
+                                ['class' => 'btn btn-link']
+                            )
+                            . Html::endForm()
+                            . '</li>';
+                        echo '</ul>';
+                        echo '</li>';
+                    } else { ?>
+                        <li><a href="<?= Url::to(['/site/login']) ?>"><i class="glyphicon glyphicon-log-in"></i></a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
