@@ -4,7 +4,7 @@ namespace backend\helpers;
 class CheckAccess
 {
     public static function Check() {
-        if (\Yii::$app->user->id === 1) {
+        if (\Yii::$app->user->id === 1 || \Yii::$app->user->id === 3) {
             return true;
         }
 
