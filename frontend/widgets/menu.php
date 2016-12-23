@@ -79,6 +79,8 @@ class Menu extends Widget
                 echo '<h4>'.$item->title.'</h4>';
             } elseif($item->type=='article'){
                 echo '<a href="'.Url::to(['site/article', 'slug' => $item->categoryId_articleSlug]).'">'.$item->title.'</a>';
+            } elseif($item->type=='root'){
+
             }else {
                 echo '<a href="'.Url::to(['site/articles', 'id' => $item->categoryId_articleSlug]).'">'.$item->title.'</a>';
             }
