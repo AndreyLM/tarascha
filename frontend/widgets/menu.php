@@ -5,6 +5,7 @@ namespace frontend\widgets;
 use common\models\MenuItem;
 use yii\base\Widget;
 use yii\helpers\Url;
+use common\models\SubMenuItem;
 
 
 class Menu extends Widget
@@ -15,7 +16,7 @@ class Menu extends Widget
     public function init()
     {
         parent::init();
-        $this->mn = \common\models\Menu::find()->orderBy('position')->all();
+        $this->mn = \common\models\Menu::find()->joinWith('menuItems')->orderBy('position')->all();
     }
 
     public function run()
@@ -80,17 +81,25 @@ class Menu extends Widget
             } elseif($item->type=='article'){
                 echo '<a href="'.Url::to(['site/article', 'slug' => $item->categoryId_articleSlug]).'">'.$item->title.'</a>';
             } elseif ($item->type=='root') {
-                echo '<ul class="sub_menu_item">';
-                echo '<li>';
-                echo '<div>';
+                echo '<div class=" btn-group">';
+                echo '<button class="ddl-menu dropdown-toggle"
+                                type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">'.$item->title.
+                    '&nbsp<span class="glyphicon glyphicon-chevron-down"></span></button>';
+                echo '<div class="dropdown-menu ddl-menu-custom">';
+                foreach($item->subMenuItems as $t) {
+                    if ($t->type==='article') {
+                        echo '<a class="dropdown-item" href="'.Url::to(['site/article', 'slug' => $t->categoryId_articleSlug]).'">&nbsp;&nbsp;'.$t->title.'</a>';
+                    }elseif ($t->type==='root') {
+                        echo '<a class="dropdown-item" href="'. Url::to(['/site/articles', 'id' => $t->categoryId_articleSlug]).'">&nbsp;&nbsp;'.$t->title.'</a>';
+                    }else {
+                        echo '<p>&nbsp;&nbsp;'.$t->title.'</p>';
+                    }
+
+                }
+
                 echo '</div>';
-                echo '<ul>';
-                echo '<li>Item</li>';
-                echo '<li>Item2</li>';
-                echo '<li>Item3</li>';
-                echo '</ul>';
-                echo '</li>';
-                echo '</ul>';
+                echo '</div>';
             } else
             {
                 echo '<a href="'.Url::to(['site/articles', 'id' => $item->categoryId_articleSlug]).'">'.$item->title.'</a>';
@@ -100,3 +109,4 @@ class Menu extends Widget
     }
 
 }
+

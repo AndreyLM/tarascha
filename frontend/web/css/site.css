@@ -369,3 +369,25 @@ a.desc:after {
     height: 350px;
 }
 
+.ddl-menu {
+    border: none;
+    margin-top: 15px;
+    background-color: transparent;
+    color: #475a6d;
+}
+
+.ddl-menu-custom {
+    background-color: #015666;
+    color: white;
+
+}
+
+.ddl-menu-custom a {
+    color: lightgrey;
+    padding-left: 10px;
+}
+
+.ddl-menu-custom p{
+    margin-top: 15px;
+    font-weight: bolder;
+}

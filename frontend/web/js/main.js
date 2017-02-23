@@ -29,4 +29,11 @@ $(document).ready(function () {
         $('#form-mail-head').modal('show')
             .find('#modalMailHead').load($(this).attr('href'));
     });
+
+    $( ".ui-state-disabled").click(function () {
+        alert("Click");
+    });
+
+
+
 });

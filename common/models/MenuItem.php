@@ -65,4 +65,9 @@ class MenuItem extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Menu::className(), ['id' => 'menu_id']);
     }
+
+    public function getSubMenuItems()
+    {
+        return $this->hasMany(SubMenuItem::className(), ['parent_menu_item' => 'id']);
+    }
 }
