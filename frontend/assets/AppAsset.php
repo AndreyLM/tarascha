@@ -16,9 +16,11 @@ class AppAsset extends AssetBundle
         'css/gallery.css',
         'css/custom_media.css',
         'css/map.css',
+
     ];
     public $js = [
         'js/main.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',
