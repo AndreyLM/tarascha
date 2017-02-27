@@ -46,10 +46,10 @@ class Menu extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Меню',
-            'description' => 'Description',
-            'type' => 'Type',
-            'categoryId_articleSlug' => 'Category Id Article Slug',
-            'position' => 'Position',
+            'description' => 'Опис',
+            'type' => 'Тип',
+            'categoryId_articleSlug' => 'Категорія чи стаття (slug/id)',
+            'position' => 'Позиція',
         ];
     }
 

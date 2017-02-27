@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\search\SearchMainCategory */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Main Categories';
+$this->title = 'Категорія';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="main-category-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Main Category', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Створити головну категорію', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

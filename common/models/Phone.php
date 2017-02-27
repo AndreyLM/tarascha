@@ -40,8 +40,8 @@ class Phone extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'position' => 'Position',
-            'text' => 'Text',
+            'position' => 'Позиція',
+            'text' => 'Текст',
         ];
     }
 }

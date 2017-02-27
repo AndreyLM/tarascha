@@ -42,7 +42,7 @@ class SubMenuItem extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'parent_menu_item' => 'Parent Menu Item',
+            'parent_menu_item' => 'Головне меню',
             'title' => 'Назва',
             'type' => 'Тип',
             'categoryId_articleSlug' => 'Категорія, стаття',

@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\MainCategory */
 
-$this->title = 'Create Main Category';
-$this->params['breadcrumbs'][] = ['label' => 'Main Categories', 'url' => ['index']];
+$this->title = 'Створити нову категорію';
+$this->params['breadcrumbs'][] = ['label' => 'Головні категорії', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="main-category-create">

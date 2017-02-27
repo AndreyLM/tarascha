@@ -170,7 +170,7 @@ if (!$model->isNewRecord) {
     <hr />
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Module::t('default', 'CREATE') : Module::t('default', 'UPDATE'), [
+        <?= Html::submitButton($model->isNewRecord ? Module::t('default', 'Створити') : Module::t('default', 'Оновити'), [
                 'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']
         ); ?>
     </div>

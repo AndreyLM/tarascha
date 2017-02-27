@@ -3,9 +3,9 @@
 use yii\helpers\Html;
 use sadovojav\gallery\Module;
 
-$this->title = Module::t('default', 'CREATE');
+$this->title = Module::t('default', 'Створити');
 $this->params['breadcrumbs'] = [
-    ['label' => Module::t('default', 'GALLERIES'), 'url' => ['index']],
+    ['label' => Module::t('default', 'Галереї'), 'url' => ['index']],
     $this->title
 ];
 

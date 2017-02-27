@@ -39,8 +39,8 @@ class Video extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'value' => 'Value',
+            'title' => 'Назва',
+            'value' => 'Значення',
         ];
     }
 }

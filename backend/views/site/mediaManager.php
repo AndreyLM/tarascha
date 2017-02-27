@@ -8,8 +8,8 @@ $this->title = "File manager";
 <div class="file-manager">
 <?= ElFinder::widget([
     'language' => 'ru',
-    'controller' => 'elfinder', // âñòàâëÿåì íàçâàíèå êîíòðîëëåðà, ïî óìîë÷àíèþ ðàâåí elfinder
-    'path' => '', // áóäåò îòêðûòà ïàïêà èç íàñòðîåê êîíòðîëëåðà ñ äîáàâëåíèåì óêàçàííîé ïîä äåðèòîðèè
+    'controller' => 'elfinder', // Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€Ð°, Ð¿Ð¾ ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ Ñ€Ð°Ð²ÐµÐ½ elfinder
+    'path' => '', // Ð±ÑƒÐ´ÐµÑ‚ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð° Ð¿Ð°Ð¿ÐºÐ° Ð¸Ð· Ð½Ð°ÑÑ‚Ñ€Ð¾ÐµÐº ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€Ð° Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸ÐµÐ¼ ÑƒÐºÐ°Ð·Ð°Ð½Ð½Ð¾Ð¹ Ð¿Ð¾Ð´ Ð´ÐµÑ€Ð¸Ñ‚Ð¾Ñ€Ð¸Ð¸
     'filter' =>
         [
             'image',
@@ -18,7 +18,7 @@ $this->title = "File manager";
             'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
             'application/vnd.ms-excel',
             'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-        ], // ôèëüòð ôàéëîâ, ìîæíî çàäàòü ìàññèâ ôèëüòðîâ https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#wiki-onlyMimes
-    'callbackFunction' => new JsExpression('function(file, id){}') // id - id âèäæåòà
+        ], // Ñ„Ð¸Ð»ÑŒÑ‚Ñ€ Ñ„Ð°Ð¹Ð»Ð¾Ð², Ð¼Ð¾Ð¶Ð½Ð¾ Ð·Ð°Ð´Ð°Ñ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð² Ñ„Ð¸Ð»ÑŒÑ‚Ñ€Ð¾Ð² https://github.com/Studio-42/elFinder/wiki/Client-configuration-options#wiki-onlyMimes
+    'callbackFunction' => new JsExpression('function(file, id){}') // id - id Ð²Ð¸Ð´Ð¶ÐµÑ‚Ð°
 ]);?>
 </div>

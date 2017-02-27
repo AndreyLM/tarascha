@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\search\BannerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Banners';
+$this->title = 'Банери';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="banner-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Banner', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Створити банер', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

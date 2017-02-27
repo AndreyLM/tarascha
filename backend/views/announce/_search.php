@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'article_id') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('search', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton('Пошук', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
     </div>
 

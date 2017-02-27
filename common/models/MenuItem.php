@@ -54,7 +54,7 @@ class MenuItem extends \yii\db\ActiveRecord
             'type' => 'Тип',
             'categoryId_articleSlug' => 'Id категорії, або lug статті',
             'position' => 'Позиція',
-            'position2' => 'Position2',
+            'position2' => 'Позиція 2',
         ];
     }
 

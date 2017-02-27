@@ -48,9 +48,9 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'category_id' => 'Category ID',
-            'parent_category_id' => 'Parent Category',
-            'title' => 'SubCategory',
-            'description' => 'Description',
+            'parent_category_id' => 'Головна категорія',
+            'title' => 'Категорія',
+            'description' => 'Опис',
             'slug' => 'Slug',
         ];
     }

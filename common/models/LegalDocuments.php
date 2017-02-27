@@ -43,10 +43,10 @@ class LegalDocuments extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'type' => 'Type',
-            'year' => 'Year',
-            'month' => 'Month',
+            'title' => 'Назва',
+            'type' => 'Тип',
+            'year' => 'Рік',
+            'month' => 'Місяць',
         ];
     }
 }

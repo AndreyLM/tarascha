@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model common\models\LegalDocuments */
 
 $this->title = 'Нормативно-правові документи - оновити ';
-$this->params['breadcrumbs'][] = ['label' => 'Legal Documents', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Нормативно-правові документи', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->year.' - ', $model->month, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

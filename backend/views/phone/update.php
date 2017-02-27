@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\Phone */
 
-$this->title = 'Update Phone: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Phones', 'url' => ['index']];
+$this->title = 'Оновити телефонний номер: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Телефонні номера', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Оновити';
 ?>
 <div class="phone-update">
 

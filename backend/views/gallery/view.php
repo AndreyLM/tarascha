@@ -6,7 +6,7 @@ use sadovojav\gallery\Module;
 
 $this->title = Html::encode($model->name);
 $this->params['breadcrumbs'] = [
-    ['label' => Module::t('default', 'GALLERIES'), 'url' => ['index']],
+    ['label' => Module::t('default', 'Фотогалереї'), 'url' => ['index']],
     $this->title
 ];
 
@@ -21,16 +21,16 @@ $this->params['breadcrumbs'] = [
 
             <div class="col-md-3">
                 <div class="pull-right">
-                    <?= Html::a(Module::t('default', 'CREATE'), ['create'], [
+                    <?= Html::a(Module::t('default', 'Створити'), ['create'], [
                         'class' => 'btn btn-success btn-sm'
                     ]); ?>
-                    <?= Html::a(Module::t('default', 'UPDATE'), ['update', 'id' => $model->id], [
+                    <?= Html::a(Module::t('default', 'Оновити'), ['update', 'id' => $model->id], [
                         'class' => 'btn btn-primary btn-sm'
                     ]); ?>
-                    <?= Html::a(Module::t('default', 'DELETE'), ['delete', 'id' => $model->id], [
+                    <?= Html::a(Module::t('default', 'Видалити'), ['delete', 'id' => $model->id], [
                         'class' => 'btn btn-danger btn-sm',
                         'data' => [
-                            'confirm' => Module::t('default', 'DELETE_ITEM'),
+                            'confirm' => Module::t('default', 'Видалити елемент'),
                             'method' => 'post',
                         ],
                     ]); ?>

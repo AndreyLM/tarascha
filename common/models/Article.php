@@ -80,16 +80,16 @@ class Article extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'category_id' => 'Category ID',
+            'category_id' => 'Категорія',
             'slug' => 'Slug',
-            'img' => 'Article image',
+            'img' => 'Зображення',
             'intro_text' => 'Intro Text',
-            'full_text' => 'Full Text',
-            'tags' => 'Tags',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'isActive' => 'Is Active',
-            'isFavorite' => 'Is Favorite',
+            'full_text' => 'Повний текст',
+            'tags' => 'Теги',
+            'created_at' => 'Дата створення',
+            'updated_at' => 'Дата публікації',
+            'isActive' => 'Опублікувати ',
+            'isFavorite' => 'Відобразити на головній сторінці',
         ];
     }
 

@@ -8,7 +8,7 @@ use yii\widgets\ListView;
 /* @var $searchModel common\models\search\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'All Categories';
+$this->title = 'Всі категорії';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

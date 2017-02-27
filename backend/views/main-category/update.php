@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\MainCategory */
 
-$this->title = 'Update Main Category: ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Main Categories', 'url' => ['index']];
+$this->title = 'Оновити головну категорію: ' . $model->title;
+$this->params['breadcrumbs'][] = ['label' => 'Головні категорії', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Оновити';
 ?>
 <div class="main-category-update">
 

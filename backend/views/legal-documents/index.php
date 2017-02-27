@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\search\LegalDocumentsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Legal Documents';
+$this->title = 'Нормативні документи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="legal-documents-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Legal Documents', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Створити нормативно-правовий документ', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

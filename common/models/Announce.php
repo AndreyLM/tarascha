@@ -40,8 +40,8 @@ class Announce extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'article_id' => 'Article ID',
+            'title' => 'Назва',
+            'article_id' => 'Стаття',
         ];
     }
 }

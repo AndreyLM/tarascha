@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\MenuItem */
 
-$this->title = 'Create Menu Item';
-$this->params['breadcrumbs'][] = ['label' => 'Menu Items', 'url' => ['index']];
+$this->title = 'Створити пункт меню';
+$this->params['breadcrumbs'][] = ['label' => 'Пункти меню', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="menu-item-create">

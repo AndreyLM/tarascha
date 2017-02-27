@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\search\SubMenuItemSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sub Menu Items';
+$this->title = 'Підпункти меню';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sub-menu-item-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Sub Menu Item', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Створити меню', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

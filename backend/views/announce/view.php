@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Announce */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Announces', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Оголошення', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="announce-view">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Оновити', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 <!--        --><?php //echo Html::a('Delete', ['delete', 'id' => $model->id], [
 //            'class' => 'btn btn-danger',
 //            'data' => [

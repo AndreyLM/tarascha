@@ -41,9 +41,9 @@ class Banner extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'link' => 'Link',
-            'img' => 'Img',
-            'position' => 'Position',
+            'link' => 'Ссилка',
+            'img' => 'Зображення',
+            'position' => 'Позиція',
         ];
     }
 }
