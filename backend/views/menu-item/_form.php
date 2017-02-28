@@ -20,7 +20,7 @@ use common\models\Menu;
 
     <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'type')->dropDownList(['header' => 'header', 'category' => 'category', 'article' => 'article']) ?>
+    <?= $form->field($model, 'type')->dropDownList(['root' =>'Меню', 'header' => 'Заголовок', 'category' => 'Статті категорії', 'article' => 'Стаття']) ?>
 
     <?= $form->field($model, 'categoryId_articleSlug')->textInput(['maxlength' => true]) ?>
 
@@ -29,7 +29,7 @@ use common\models\Menu;
     <?= $form->field($model, 'position2')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Створити' : 'Оновити', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

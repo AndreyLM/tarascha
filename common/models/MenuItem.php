@@ -52,7 +52,7 @@ class MenuItem extends \yii\db\ActiveRecord
             'title' => 'Пункт меню',
             'description' => 'Опис',
             'type' => 'Тип',
-            'categoryId_articleSlug' => 'Id категорії, або lug статті',
+            'categoryId_articleSlug' => 'Категорія, стаття (slug/id)',
             'position' => 'Позиція',
             'position2' => 'Позиція 2',
         ];

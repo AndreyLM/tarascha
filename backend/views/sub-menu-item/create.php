@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\SubMenuItem */
 
-$this->title = 'Ñòâîðèòè ìåíþ';
-$this->params['breadcrumbs'][] = ['label' => 'Ìåíþ', 'url' => ['index']];
+$this->title = 'Ð¡Ñ‚Ð²Ð¾Ñ€Ð¸Ñ‚Ð¸ Ð¼ÐµÐ½ÑŽ';
+$this->params['breadcrumbs'][] = ['label' => 'ÐœÐµÐ½ÑŽ', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
