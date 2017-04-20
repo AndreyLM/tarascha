@@ -15,13 +15,15 @@ use yii\bootstrap\Modal;
 use frontend\widgets\Menu;
 use frontend\widgets\Banners;
 use frontend\widgets\Phone;
+use frontend\widgets\ApiCurrency;
+use frontend\widgets\ApiWeather;
 
 
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="uk_UA">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -186,6 +188,13 @@ AppAsset::register($this);
 
 <?php //echo \Yii::$app->view->renderFile('@app/views/layouts/partial/menu2.php'); ?>
 <?= Menu::widget() ?>
+<div class="container-fluid apis">
+    <div class="row">
+        <div class="col-sm-12 col-md-7"><?= ApiWeather::widget() ?></div>
+        <div class="col-sm-12 col-md-5"><?= ApiCurrency::widget() ?></div>
+    </div>
+</div>
+
 <div class="main_content">
     <div class="container-fluid">
         <div class="article_view">
