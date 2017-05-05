@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Article */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Ñòàòò³', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Ð¡Ñ‚Ð°Ñ‚Ñ‚Ñ–', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="article-view">
@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Îíîâèòè', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Âèäàëèòè', ['delete', 'id' => $model->id], [
+        <?= Html::a('ÐžÐ½Ð¾Ð²Ð¸Ñ‚Ð¸', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Ð’Ð¸Ð´Ð°Ð»Ð¸Ñ‚Ð¸', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Âè ä³éñíî áàæàºòå âèäàëèòè ñòàòòþ?',
+                'confirm' => 'Ð’Ð¸ Ð´Ñ–Ð¹ÑÐ½Ð¾ Ð±Ð°Ð¶Ð°Ñ”Ñ‚Ðµ Ð²Ð¸Ð´Ð°Ð»Ð¸Ñ‚Ð¸ ÑÑ‚Ð°Ñ‚Ñ‚ÑŽ?',
                 'method' => 'post',
             ],
         ]) ?>
